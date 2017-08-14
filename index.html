@@ -18,10 +18,18 @@
   <header id="main-toolbar" class="mdc-toolbar mdc-toolbar--fixed mdc-toolbar--waterfall mdc-toolbar--flexible mdc-toolbar--flexible-default-behavior mdc-toolbar--flexible-space-maximized">
         <div class="mdc-toolbar__row">
           <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
-            <span id="appTitle" class="mdc-toolbar__title" style="font-size: 2.125rem;">Title</span>
+            <span id="appTitle" class="mdc-toolbar__title">Title</span>
           </section>
           <section class="mdc-toolbar__section mdc-toolbar__section--align-end" role="toolbar">
-            <a href="#" class="material-icons mdc-toolbar__icon" aria-label="More" alt="More">more_vert</a>
+            <!-- <a href="#" class="material-icons mdc-toolbar__icon" aria-label="More" alt="More">more_vert</a> -->
+            <div hidden id="user-pic"></div>
+            <div hidden id="user-name"></div>
+            <button id="sign-out" class="mdc-button">
+              Sign-out
+            </button>
+            <button id="sign-in" class="mdc-button">
+              <i class="material-icons">account_circle</i>Sign-in
+            </button>
           </section>
         </div>
   </header>
@@ -33,43 +41,26 @@
     <!--  All Entries View -->
     <div id="all-entries">
       <div class="mdc-grid-list mdc-grid-list--twoline-caption">
-        <ul id="contestant-list" class="mdc-grid-list__tiles">
-
-          <li id="li1" class="mdc-grid-tile">
-            <div class="mdc-grid-tile__primary">
-              <img class="mdc-grid-tile__primary-content" src="assets/cookoff.png" />
-            </div>
-            <span class="mdc-grid-tile__secondary">
-              <span class="mdc-grid-tile__title">Title</span>
-              <span class="mdc-grid-tile__support-text">Support text</span>
-            </span>
-          </li>
-
-          <li id="li2" class="mdc-grid-tile">
-            <div class="mdc-grid-tile__primary">
-              <img class="mdc-grid-tile__primary-content" src="assets/cookoff.png" />
-            </div>
-            <span class="mdc-grid-tile__secondary">
-              <span class="mdc-grid-tile__title">Title</span>
-              <span class="mdc-grid-tile__support-text">Support text</span>
-            </span>
-          </li>
-
-          <li id="li3" class="mdc-grid-tile">
-            <div class="mdc-grid-tile__primary">
-              <img class="mdc-grid-tile__primary-content" src="assets/cookoff.png" />
-            </div>
-            <span class="mdc-grid-tile__secondary">
-              <span class="mdc-grid-tile__title">Title</span>
-              <span class="mdc-grid-tile__support-text">Support text</span>
-            </span>
-          </li>
-
-        </ul>
+        <ul id="contestant-list" class="mdc-grid-list__tiles"></ul>
       </div>
       <button id="addEntry" class="mdc-fab material-icons">
         <i class="material-icons">add</i>
       </button>
+          
+      <script id="entry-template" type="text/x-handlebars-template">
+        {{#each entries}}
+        <li id="{{id}}" class="mdc-grid-tile">
+          <div class="mdc-grid-tile__primary">
+            <img class="mdc-grid-tile__primary-content" src="{{picture}}" />
+          </div>
+          <span class="mdc-grid-tile__secondary">
+            <span class="mdc-grid-tile__title">{{this.title}}</span>
+            <span class="mdc-grid-tile__support-text">{{this.description}}</span>
+          </span>
+        </li>
+        {{/each}}
+      </script>
+      
 
     </div>
 
@@ -276,7 +267,7 @@
     <div>
   </main>
 
-<!-- Firebase related stuff
+  <!-- Firebase related stuff -->
   <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
   <script>
   // Initialize Firebase
@@ -290,10 +281,11 @@
   };
   firebase.initializeApp(config);
   </script>
--->
+
   <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
   <script>window.mdc.autoInit();</script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
   <script src="app.js"></script>
   <script>
 

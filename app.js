@@ -4,18 +4,44 @@ const appConfig  = {
   appTitle: "CookOff"
 };
 
-const entries = {
-};
-// initial showing
-// document.getElementById('single-entry').className="hidden";
-// document.getElementById('all-entries').className="active";
+const contestEntries = [
+  {
+    id: "1234",
+    title: "Puglia Bread",
+    description: "Made with love",
+    picture: "/assets/bread01.jpg",
+    scores: [
+      
+    ]
+  },
+  {
+    id: "3241",
+    title: "Ciabatta",
+    description: "Made with passion",
+    picture: "/assets/bread01.jpg",
+    scores: [
+      
+    ]
+  },
+
+  {
+    id: "8976321",
+    title: "French boule",
+    description: "Great bread",
+    picture: "/assets/bread01.jpg",
+    scores: [
+      
+    ]
+  },
+  
+];
 
 function configuration ( cfg ) {
   const title = document.getElementById('appTitle');
   title.innerText = cfg.appTitle;
 };
 
-// ==== Add contestant Entry Dialog
+//_ Add contestant Entry Dialog
 const addDialog = new mdc.dialog.MDCDialog(document.querySelector('#add-entry'));
 
 addDialog.listen('MDCDialog:accept', function() {
@@ -31,9 +57,7 @@ document.querySelector('#addEntry').addEventListener('click', function (evt) {
   addDialog.show();
 });
 
-
-
-// ==== Judgement dialog
+//_ Judgment Dialog
 const entryDialog = new mdc.dialog.MDCDialog(document.querySelector('#single-entry'));
 
 entryDialog.listen('MDCDialog:accept', function() {
@@ -44,12 +68,12 @@ entryDialog.listen('MDCDialog:cancel', function() {
   console.log('canceled');
 });
 
-// slider values
+//_. Sliders
 const {MDCSlider} = mdc.slider;
 const slider = new MDCSlider(document.querySelector('#judge-slider'));
 slider.listen('MDCSlider:change', () => console.log(`Value changed to ${slider.value}`));
 
-// ==== Authentication
+//_ Authentication
 const authDialog = new mdc.dialog.MDCDialog(document.querySelector('#auth-dialog'));
 
 authDialog.listen('MDCDialog:accept', function() {
@@ -65,59 +89,93 @@ document.querySelector('#signUp').addEventListener('click', function(e){
 
 });
 
-// ==== Main page
-// clicking on an entry
-document.querySelectorAll('#contestant-list li').forEach( li => {
-  li.addEventListener('click', function (e) {
-    // now we need to figure out which item user clicked on
-    if(e.currentTarget && e.currentTarget.nodeName == "LI") {
-      //console.log(e.currentTarget.id + " was clicked");
-      entryDialog.lastFocusedTarget = e.target;
-      entryDialog.show();
-      // HACK: this is to show sliders on a dialog correctly
-      setTimeout(function(e){
-        let event = document.createEvent('HTMLEvents');
-        event.initEvent('resize', true, false);
-        window.dispatchEvent(event);
-        console.log("resize");
-      },1000);
-    }
+//_ Main page
+
+//_. Display Contest Entries
+function displayEntries (data) {
+  let entrySource   = document.getElementById("entry-template").innerText;
+  let entryTemplate = Handlebars.compile(entrySource);
+  let entryHtml = entryTemplate(data);
+  document.getElementById("contestant-list").insertAdjacentHTML('beforeend',entryHtml);
+
+//_ , Adding OnClick for Each Entry
+  document.querySelectorAll('#contestant-list li').forEach( li => {
+    li.addEventListener('click', function (e) {
+      // now we need to figure out which item user clicked on
+      if(e.currentTarget && e.currentTarget.nodeName == "LI") {
+        //console.log(e.currentTarget.id + " was clicked");
+        entryDialog.lastFocusedTarget = e.target;
+        entryDialog.show();
+        // HACK: this is to show sliders on a dialog correctly
+        setTimeout(function(e){
+          let event = document.createEvent('HTMLEvents');
+          event.initEvent('resize', true, false);
+          window.dispatchEvent(event);
+          console.log("resize");
+        },1000);
+      }
+    });
   });
-});
+}
+  
 
+//_ CookOff class old style
+function CookOffContest () {
+  this.userPic = document.getElementById('user-pic');
+  this.userName = document.getElementById('user-name');
+  this.signInButton = document.getElementById('sign-in');
+  this.signOutButton = document.getElementById('sign-out');
+  this.initFirebase();
+  displayEntries({entries: contestEntries});
+}
 
+//_. initFirebase
+CookOffContest.prototype.initFirebase = function() {
 
+  this.auth = firebase.auth();
+  this.db = firebase.database();
+  this.stor = firebase.storage();
 
-(function(){
   // configuration
-  // const db = firebase.database().ref().child('config');
-  // db.on('value', data => configuration(data.val()));
-  configuration(appConfig);
+  const db = this.db.ref().child('config');
+  db.on('value', data => configuration(data.val()));
 
-  // show entries
+  // Authentication
+  this.auth.onAuthStateChanged(this.onAuthStateChanged.bind(this));
+}
 
-  // users
+//_. onAuthStateChanged
+CookOffContest.prototype.onAuthStateChanged = function(user) {
+  if (user) { // User is signed in!
+    // Get profile pic and user's name from the Firebase user object.
+    var profilePicUrl = user.photoURL;
+    var userName = user.displayName;
 
+    // Set the user's profile pic and name.
+    this.userPic.style.backgroundImage = 'url(' + (profilePicUrl || '/assets/profile_placeholder.png') + ')';
+    this.userName.textContent = userName;
 
-  // ==================== Application functionality =======================
+    // Show user's profile and sign-out button.
+    this.userName.removeAttribute('hidden');
+    this.userPic.removeAttribute('hidden');
+    this.signOutButton.removeAttribute('hidden');
+    // Hide sign-in button.
+    this.signInButton.setAttribute('hidden', 'true');
 
-  // An event handler with calls the render function on every hashchange.
-  // The render function will show the appropriate content of out page.
+    // We load currently existing chant messages.
+    this.loadMessages();
 
-  // $(window).on('hashchange', function(){
-  //   render(decodeURI(window.location.hash));
-  // });
-  //
-  // function renderSingleEntry ( idx ) {
-  //   let page = $('.single-entry'),
-  //     container = $('.preview-entry');
-  //   page.addClass('visible');
-  // }
-  //
-  // function renderErrorPage () {
-  //   let page = $('.error');
-  //   page.addClass('visible');
-  // }
+  } else { // User is signed out!
+    // Hide user's profile and sign-out button.
+    this.userName.setAttribute('hidden', 'true');
+    this.userPic.setAttribute('hidden', 'true');
+    this.signOutButton.setAttribute('hidden', 'true');
+    // Show sign-in button.
+    this.signInButton.removeAttribute('hidden');
+  }
+}
 
-
-}());
+//_ Loading CookOff
+window.onload = function(){
+  window.cookOffContest = new CookOffContest();
+}
