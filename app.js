@@ -41,7 +41,8 @@ entryDialog.listen('MDCDialog:cancel', function() {
 //_. displayRatingEntry
 function displayRatingEntry(id, entries) {
   // find entry in the list
-  let entry = _.find(entries, (e) => e.id === id);
+  let entry = /*_.find(entries, (e) => e.id === id);*/
+      entries[id];
   if (!entry) {
     console.error(`Couldn't find entry with '${id}'`);
     return;

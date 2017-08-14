@@ -49,7 +49,7 @@
           
       <script id="entry-template" type="text/x-handlebars-template">
         {{#each entries}}
-        <li id="{{id}}" class="mdc-grid-tile">
+        <li id="{{@index}}" class="mdc-grid-tile">
           <div class="mdc-grid-tile__primary">
             <img class="mdc-grid-tile__primary-content" src="{{this.image}}" />
           </div>
