@@ -230,50 +230,51 @@
       </div>
     </aside>
 
-    <!-- Adding Entry View -->
+    <!-- Adding Entry Dialog -->
     <aside id="add-entry"
            class="mdc-dialog"
            role="alertdialog">
-           <div class="mdc-dialog__surface">
-               <header class="mdc-dialog__header">
-                 <h2 id="my-mdc-dialog-label" class="mdc-dialog__header__title">
-                   Add Contestant
-                 </h2>
-               </header>
-               <section id="my-mdc-dialog-description" class="mdc-dialog__body">
-                 Adding a contestant couldn't be easier.
+      <div class="mdc-dialog__surface">
+        <header class="mdc-dialog__header">
+          <h2 id="my-mdc-dialog-label" class="mdc-dialog__header__title">
+            Add Contestant
+          </h2>
+        </header>
+        <section id="my-mdc-dialog-description" class="mdc-dialog__body">
+          Adding a contestant couldn't be easier.
 
-                 <!-- loading and displaying the image -->
-                 <form action="server.cgi" method="post" enctype="multipart/form-data">
-                   <input id="captureImage" type="file" name="image" capture="camera" accept="image/*" >
-                   <input type="submit" value="Upload">
-                 </form>
+          <!-- loading and displaying the image -->
+          <form id="new-entry-form" action="#">
+            <input id="captureImage" type="file" name="image/*,capture=camera" />
+            <img id="snapshot" />
+            <!-- end of the image capture and display section -->
 
-                 <img id="snapshot" />
-                 <!-- end of the image capture and display section -->
-
-                 <div class="mdc-textfield mdc-textfield--fullwidth">
-                   <input class="mdc-textfield__input"
-                          type="text"
-                          placeholder="Name or Title"
-                          aria-label="Name or Title">
-                 </div>
-                 <div class="mdc-textfield mdc-textfield--multiline mdc-textfield--fullwidth">
-                   <textarea class="mdc-textfield__input"
-                             placeholder="Some description would be helpful too"
-                             rows="8" cols="40"
-                             aria-label="Some description would be helpful too"></textarea>
-                 </div>
-               </section>
-               <footer class="mdc-dialog__footer">
-                 <button type="button" class="mdc-button mdc-button--raised mdc-dialog__footer__button mdc-dialog__footer__button--cancel">Cancel</button>
-                 <button type="button" class="mdc-button mdc-button--raised mdc-button--accent mdc-dialog__footer__button mdc-dialog__footer__button--accept">Add</button>
-               </footer>
-             </div>
-             <div class="mdc-dialog__backdrop"></div>
+            <div class="mdc-textfield mdc-textfield--fullwidth">
+              <input class="mdc-textfield__input"
+                     type="text"
+                     placeholder="Name or Title"
+                     aria-label="Name or Title"
+                     id="new-entry-title" />
+            </div>
+            <div class="mdc-textfield mdc-textfield--multiline mdc-textfield--fullwidth">
+              <textarea class="mdc-textfield__input"
+                        placeholder="Some description would be helpful too"
+                        rows="8" cols="40"
+                        aria-label="Some description would be helpful too"
+                        id="new-entry-description"></textarea>
+            </div>
+          </form>
+          
+        </section>
+        <footer class="mdc-dialog__footer">
+          <button type="button" class="mdc-button mdc-button--raised mdc-dialog__footer__button mdc-dialog__footer__button--cancel">Cancel</button>
+          <button type="button" class="mdc-button mdc-button--raised mdc-button--accent mdc-dialog__footer__button mdc-dialog__footer__button--accept">Add</button>
+        </footer>
+      </div>
+      <div class="mdc-dialog__backdrop"></div>
     </aside>
 
-    <div>
+  </div>
   </main>
 
   <!-- Firebase related stuff -->

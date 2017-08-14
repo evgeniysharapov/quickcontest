@@ -7,6 +7,8 @@ Handlebars.registerHelper('capitalize', function(str){
   return str.slice(0,1).toUpperCase() + str.slice(1);
 });
 
+const LOADING_IMAGE_URL = 'https://www.google.com/images/spin-32.gif';
+
 const appConfig  = {
   appTitle: "CookOff",
 
@@ -58,22 +60,6 @@ function configuration ( cfg ) {
   title.innerText = cfg.appTitle;
 };
 
-//_ Add contestant Entry Dialog
-const addDialog = new mdc.dialog.MDCDialog(document.querySelector('#add-entry'));
-
-addDialog.listen('MDCDialog:accept', function() {
-  console.log('accepted');
-});
-
-addDialog.listen('MDCDialog:cancel', function() {
-  console.log('canceled');
-});
-
-document.querySelector('#addEntry').addEventListener('click', function (evt) {
-  addDialog.lastFocusedTarget = evt.target;
-  addDialog.show();
-});
-
 //_ Judgment Dialog
 const entryDialog = new mdc.dialog.MDCDialog(document.querySelector('#single-entry'));
 
@@ -84,6 +70,7 @@ entryDialog.listen('MDCDialog:accept', function() {
 entryDialog.listen('MDCDialog:cancel', function() {
   console.log('canceled');
 });
+
 //_. displayRatingEntry
 function displayRatingEntry(id, entries) {
   // find entry in the list
@@ -168,23 +155,59 @@ function CookOffContest () {
   this.userName = document.getElementById('user-name');
   this.signInButton = document.getElementById('sign-in');
   this.signOutButton = document.getElementById('sign-out');
+
+  this.signOutButton.addEventListener('click', this.signOut.bind(this));
+  this.signInButton.addEventListener('click', this.signIn.bind(this));
+
+  
+  this.newEntryImage = document.getElementById('captureImage');
+  this.newEntrySnapshot = document.getElementById('snapshot');
+  this.newEntryTitle = document.getElementById("new-entry-title");
+  this.newEntryDescription = document.getElementById("new-entry-description");
+  
   this.initFirebase();
   displayEntries({entries: contestEntries});
-}
+
+//_. Add contestant Entry Dialog  
+  this.addDialog = new mdc.dialog.MDCDialog(document.querySelector('#add-entry'));
+
+  this.addDialog.listen('MDCDialog:accept', this.addEntry.bind(this));
+
+  this.addDialog.listen('MDCDialog:cancel', function() {
+    this.resetTextField(this.newEntryTitle);
+    this.resetTextField(this.newEntryDescription);
+  }.bind(this));
+
+  document.querySelector('#addEntry').addEventListener('click', (evt) => {
+    this.addDialog.lastFocusedTarget = evt.target;
+    this.addDialog.show();
+    this.newEntryImage.addEventListener('change', this.updateNewEntryImage.bind(this));
+  });
+};
 
 //_. initFirebase
 CookOffContest.prototype.initFirebase = function() {
-
   this.auth = firebase.auth();
   this.db = firebase.database();
-  this.stor = firebase.storage();
-
+  this.storage = firebase.storage();
   // configuration
   const db = this.db.ref().child('config');
   db.on('value', data => configuration(data.val()));
-
   // Authentication
   this.auth.onAuthStateChanged(this.onAuthStateChanged.bind(this));
+};
+
+//_. signIn
+CookOffContest.prototype.signIn = function() {
+  // Sign in Firebase using popup auth and Google as the identity provider.
+  var provider = new firebase.auth.GoogleAuthProvider();
+  this.auth.signInWithPopup(provider);
+}
+
+//_. signOut
+CookOffContest.prototype.signOut = function () {
+  // Sign out of Firebase.
+  this.auth.signOut();
 }
 
 //_. onAuthStateChanged
@@ -205,9 +228,6 @@ CookOffContest.prototype.onAuthStateChanged = function(user) {
     // Hide sign-in button.
     this.signInButton.setAttribute('hidden', 'true');
 
-    // We load currently existing chant messages.
-    this.loadMessages();
-
   } else { // User is signed out!
     // Hide user's profile and sign-out button.
     this.userName.setAttribute('hidden', 'true');
@@ -217,6 +237,60 @@ CookOffContest.prototype.onAuthStateChanged = function(user) {
     this.signInButton.removeAttribute('hidden');
   }
 }
+//_. addEntry
+CookOffContest.prototype.addEntry = function() {
+  // TODO: add sign-in check
+  let currentUser = this.auth.currentUser;
+  let file = this.newEntryImage.files[0];
+  
+  // upload image to cloud 
+  let filePath = `${currentUser.uid}/${"test"}/${file.name}`;
+
+  // upload entry with correct url
+  this.db.ref().child('entries').push({
+    title: this.newEntryTitle.value,
+    description: this.newEntryDescription.value,
+    author: currentUser.uid,
+    image: LOADING_IMAGE_URL
+  }).then( data => {
+    return this.storage.ref(filePath).put(file).then(snapshot => {
+       // Get the file's Storage URI and update the entry.
+       var fullPath = snapshot.metadata.fullPath;
+       return data.update({image: this.storage.ref(fullPath).toString()});
+    });
+  }).then(() => {
+    this.resetTextField(this.newEntryTitle);
+    this.resetTextField(this.newEntryDescription);
+    this.resetImage(this.newEntrySnapshot);
+  }).catch( error => {
+    console.error('There was an error crearing entry', error);
+  });
+};
+
+//_. updateNewEntryImage
+CookOffContest.prototype.updateNewEntryImage = function (event) {
+  event.preventDefault();
+  let file = event.target.files[0];
+  if( file != null ) {
+    let reader = new FileReader();
+    reader.onload = (e) => {
+      this.newEntrySnapshot.src = e.target.result
+    };
+    reader.readAsDataURL(file);
+  }
+};
+
+//_. resetTextField
+CookOffContest.prototype.resetTextField = function(field) {
+  field.value = "";
+};
+
+//_. resetImage
+CookOffContest.prototype.resetImage = function(image) {
+  image.src = "";
+}
+
+
 
 //_ Loading CookOff
 window.onload = function(){
