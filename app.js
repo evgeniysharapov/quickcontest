@@ -22,39 +22,6 @@ const appConfig  = {
   ]
 };
 
-
-const contestEntries = [
-  {
-    id: "1234",
-    title: "Puglia Bread",
-    description: "Made with love",
-    picture: "/assets/bread01.jpg",
-    scores: [
-      
-    ]
-  },
-  {
-    id: "3241",
-    title: "Ciabatta",
-    description: "Made with passion",
-    picture: "/assets/bread01.jpg",
-    scores: [
-      
-    ]
-  },
-
-  {
-    id: "8976321",
-    title: "French boule",
-    description: "Great bread",
-    picture: "/assets/bread01.jpg",
-    scores: [
-      
-    ]
-  },
-  
-];
-
 function configuration ( cfg ) {
   const title = document.getElementById('appTitle');
   title.innerText = cfg.appTitle;
@@ -75,7 +42,10 @@ entryDialog.listen('MDCDialog:cancel', function() {
 function displayRatingEntry(id, entries) {
   // find entry in the list
   let entry = _.find(entries, (e) => e.id === id);
-  
+  if (!entry) {
+    console.error(`Couldn't find entry with '${id}'`);
+    return;
+  }
   // find and compile Handlebars template
   let judgeEntrySource   = document.getElementById("judge-entry-template").innerText;
   let judgeEntryTemplate = Handlebars.compile(judgeEntrySource);
@@ -135,7 +105,7 @@ function displayEntries (data) {
       if(e.currentTarget && e.currentTarget.nodeName == "LI") {
         //console.log(e.currentTarget.id + " was clicked");
         entryDialog.lastFocusedTarget = e.currentTarget;
-        displayRatingEntry(e.currentTarget.id, contestEntries);
+        displayRatingEntry(e.currentTarget.id, data.entries);
         // HACK: this is to show sliders on a dialog correctly
         setTimeout(function(e){
           let event = document.createEvent('HTMLEvents');
@@ -151,22 +121,24 @@ function displayEntries (data) {
 
 //_ CookOff class old style
 function CookOffContest () {
+  // User and authentication
   this.userPic = document.getElementById('user-pic');
   this.userName = document.getElementById('user-name');
   this.signInButton = document.getElementById('sign-in');
   this.signOutButton = document.getElementById('sign-out');
-
   this.signOutButton.addEventListener('click', this.signOut.bind(this));
   this.signInButton.addEventListener('click', this.signIn.bind(this));
 
-  
+  // Adding new entry DOM Elements 
   this.newEntryImage = document.getElementById('captureImage');
   this.newEntrySnapshot = document.getElementById('snapshot');
   this.newEntryTitle = document.getElementById("new-entry-title");
   this.newEntryDescription = document.getElementById("new-entry-description");
   
   this.initFirebase();
-  displayEntries({entries: contestEntries});
+
+  // show all the entries 
+  this.displayEntries();
 
 //_. Add contestant Entry Dialog  
   this.addDialog = new mdc.dialog.MDCDialog(document.querySelector('#add-entry'));
@@ -179,6 +151,7 @@ function CookOffContest () {
   }.bind(this));
 
   document.querySelector('#addEntry').addEventListener('click', (evt) => {
+    // TODO: should check for authenticated user
     this.addDialog.lastFocusedTarget = evt.target;
     this.addDialog.show();
     this.newEntryImage.addEventListener('change', this.updateNewEntryImage.bind(this));
@@ -237,6 +210,37 @@ CookOffContest.prototype.onAuthStateChanged = function(user) {
     this.signInButton.removeAttribute('hidden');
   }
 }
+
+
+//_. modifyImageURL
+CookOffContest.prototype.modifyImageURL = function (imageUri) {
+  if (imageUri && imageUri.startsWith('gs://')) {
+    return this.storage.refFromURL(imageUri).getMetadata().then(function(metadata) {
+      return metadata.downloadURLs[0];
+    });
+  } else {
+    return Promise.resolve(imageUri);
+  }
+}
+
+//_.  displayEntries
+CookOffContest.prototype.displayEntries = function() {
+  let entriesDb = this.db.ref().child('entries');
+  entriesDb.off();
+
+  entriesDb.once('value').then(data => {
+    return data.val();
+  }).then(entries => {
+    let promisedEntries = _.map(entries, e => {
+      let image = this.modifyImageURL(e.image);
+      return Promise.props(Object.assign({}, e, {image}));
+    });
+    return Promise.all(promisedEntries);
+  }).then(entries => {
+    displayEntries({entries});
+  });
+};
+
 //_. addEntry
 CookOffContest.prototype.addEntry = function() {
   // TODO: add sign-in check

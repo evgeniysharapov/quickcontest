@@ -51,7 +51,7 @@
         {{#each entries}}
         <li id="{{id}}" class="mdc-grid-tile">
           <div class="mdc-grid-tile__primary">
-            <img class="mdc-grid-tile__primary-content" src="{{this.picture}}" />
+            <img class="mdc-grid-tile__primary-content" src="{{this.image}}" />
           </div>
           <span class="mdc-grid-tile__secondary">
             <span class="mdc-grid-tile__title">{{this.title}}</span>
@@ -189,7 +189,7 @@
               <div class="mdc-layout-grid">
                 <div class="mdc-layout-grid__inner">
                   <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12" style="min-height: 200px;">
-                    <img src="{{this.picture}}" style="max-width: 100%; max-height: 100%;}"/>
+                    <img src="{{this.image}}" style="max-width: 100%; max-height: 100%;}"/>
                   </div>
                   {{# each scorecard}}
                   <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-3">
@@ -296,6 +296,7 @@
   <script>window.mdc.autoInit();</script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.5.0/bluebird.min.js"> </script>
   <script src="app.js"></script>
   <script>
 
