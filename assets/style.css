@@ -1,0 +1,45 @@
+/*
+*/
+:root {
+  --mdc-theme-primary: #db4a0a;
+  --mdc-theme-accent: #cf086c;
+  --mdc-theme-background: #fff;
+}
+
+.mdc-ripple-surface.mdc-ripple-upgraded.mdc-button--primary::before,
+.mdc-ripple-surface.mdc-ripple-upgraded.mdc-button--primary::after {
+  background-color: rgba(255, 255, 255, .2);
+}
+
+.mdc-toolbar__row {
+  background-image: url(https://www.avanade.com/images/re-brand/glow-1920.png);
+  background-position-y: 35%;
+  background-size: 125%;
+  height: 124px;
+}
+#main-toolbar {
+  --mdc-toolbar-ratio-to-extend-flexible: 2.5;
+}
+
+#main-content {
+  margin-top: 156px;
+}
+
+#addEntry {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 1;
+}
+
+.mdc-grid-tile {
+    --mdc-grid-list-tile-width: 180px;
+}
+
+.active {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en" class="mdc-typography">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Contest Application">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Disable tap highlight on IE -->
+  <meta name="msapplication-tap-highlight" content="no">
+
+  <title>Contest</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+
+<body class="mdc-typography">
+  <!-- Toolbar -->
+  <header id="main-toolbar" class="mdc-toolbar mdc-toolbar--fixed mdc-toolbar--waterfall mdc-toolbar--flexible mdc-toolbar--flexible-default-behavior mdc-toolbar--flexible-space-maximized">
+        <div class="mdc-toolbar__row">
+          <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+            <span id="appTitle" class="mdc-toolbar__title" style="font-size: 2.125rem;">Title</span>
+          </section>
+          <section class="mdc-toolbar__section mdc-toolbar__section--align-end" role="toolbar">
+            <a href="#" class="material-icons mdc-toolbar__icon" aria-label="More" alt="More">more_vert</a>
+          </section>
+        </div>
+  </header>
+
+
+  <main>
+    <div id="main-content" class="mdc-toolbar-fixed-adjust">
+
+    <!--  All Entries View -->
+    <div id="all-entries">
+      <div class="mdc-grid-list mdc-grid-list--twoline-caption">
+        <ul id="contestant-list" class="mdc-grid-list__tiles">
+
+          <li id="li1" class="mdc-grid-tile">
+            <div class="mdc-grid-tile__primary">
+              <img class="mdc-grid-tile__primary-content" src="assets/cookoff.png" />
+            </div>
+            <span class="mdc-grid-tile__secondary">
+              <span class="mdc-grid-tile__title">Title</span>
+              <span class="mdc-grid-tile__support-text">Support text</span>
+            </span>
+          </li>
+
+          <li id="li2" class="mdc-grid-tile">
+            <div class="mdc-grid-tile__primary">
+              <img class="mdc-grid-tile__primary-content" src="assets/cookoff.png" />
+            </div>
+            <span class="mdc-grid-tile__secondary">
+              <span class="mdc-grid-tile__title">Title</span>
+              <span class="mdc-grid-tile__support-text">Support text</span>
+            </span>
+          </li>
+
+          <li id="li3" class="mdc-grid-tile">
+            <div class="mdc-grid-tile__primary">
+              <img class="mdc-grid-tile__primary-content" src="assets/cookoff.png" />
+            </div>
+            <span class="mdc-grid-tile__secondary">
+              <span class="mdc-grid-tile__title">Title</span>
+              <span class="mdc-grid-tile__support-text">Support text</span>
+            </span>
+          </li>
+
+        </ul>
+      </div>
+      <button id="addEntry" class="mdc-fab material-icons">
+        <i class="material-icons">add</i>
+      </button>
+
+    </div>
+
+
+    <!-- Authentication Dialog -->
+    <aside id="auth-dialog"
+           class="mdc-dialog"
+           role="alertdialog">
+      <div id="auth" class="mdc-dialog__surface">
+        <header class="mdc-dialog__header">
+          <h2 class="mdc-dialog__header__title">
+            Sign In or Sign Up
+          </h2>
+        </header>
+        <section class="mdc-dialog__body">
+
+          <form action="#" id="sign-in-form">
+            <div>
+              <div class="mdc-form-field">
+                <div class="mdc-textfield" data-mdc-auto-init="MDCTextfield">
+                  <input id="username" type="text" class="mdc-textfield__input">
+                  <label for="username" class="mdc-textfield__label">
+                    Username
+                  </label>
+                </div>
+              </div>
+
+              <div class="mdc-form-field">
+                <div class="mdc-textfield" data-mdc-auto-init="MDCTextfield">
+                  <input id="password" type="password" class="mdc-textfield__input">
+                  <label for="password" class="mdc-textfield__label">
+                    Password
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <button type="submit"
+                    class="mdc-button
+                           mdc-button--raised
+                           mdc-button--primary
+                           mdc-ripple-surface"
+                    data-mdc-auto-init="MDCRipple">
+              sign in
+            </button>
+            <button id="signUp" type="button" class="mdc-button mdc-button--raised">Sign Up</button>
+          </form>
+        </section>
+      </div>
+    </aside>
+
+    <aside id="signup-dialog"
+           class="mdc-dialog"
+           role="alertdialog">
+      <div class="mdc-dialog__surface">
+        <header class="mdc-dialog__header">
+          <h2 class="mdc-dialog__header__title">Sign Up using your phone</h2>
+        </header>
+        <section class="mdc-dialog__body">
+
+          <form action="#" id="signup-form">
+            <div>
+              <div class="mdc-form-field">
+                <div class="mdc-textfield" data-mdc-auto-init="MDCTextfield">
+                  <input id="username" type="text" class="mdc-textfield__input">
+                  <label for="username" class="mdc-textfield__label">
+                    Username
+                  </label>
+                </div>
+              </div>
+
+              <div class="mdc-form-field">
+                <div class="mdc-textfield" data-mdc-auto-init="MDCTextfield">
+                  <input id="password" type="password" class="mdc-textfield__input">
+                  <label for="password" class="mdc-textfield__label">
+                    Password
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <button type="submit"
+                    class="mdc-button
+                           mdc-button--raised
+                           mdc-button--primary
+                           mdc-ripple-surface"
+                    data-mdc-auto-init="MDCRipple">
+              sign in
+            </button>
+            <button id="signUp" type="button" class="mdc-button mdc-button--raised">Sign Up</button>
+          </form>
+
+        </section>
+      </div>
+      <div class="mdc-dialog__backdrop"></div>
+    </aside>
+
+    <!-- Single Entry for Judgement  -->
+    <div id="single-entry">
+       <h2 class="mdc-typography--display1">
+         Rate the Contestant
+       </h2>
+       <section id="rate-contestant">
+         Rate contestant on following
+         <div class="mdc-layout-grid">
+          <div class="mdc-layout-grid__inner">
+            <div class="mdc-layout-grid__cell">
+              This
+            </div>
+            <div class="mdc-layout-grid__cell">
+              <!-- Slider -->
+              <div class="mdc-slider mdc-slider--discrete" tabindex="0" role="slider"
+                   aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"
+                   aria-label="Select Value">
+                <div class="mdc-slider__track-container">
+                  <div class="mdc-slider__track"></div>
+                </div>
+                <div class="mdc-slider__thumb-container">
+                  <div class="mdc-slider__pin">
+                    <span class="mdc-slider__pin-value-marker"></span>
+                  </div>
+                  <svg class="mdc-slider__thumb" width="21" height="21">
+                    <circle cx="10.5" cy="10.5" r="7.875"></circle>
+                  </svg>
+                  <div class="mdc-slider__focus-ring"></div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+       </section>
+
+       <footer class="mdc-dialog__footer">
+         <button type="button" class="mdc-button mdc-dialog__footer__button mdc-dialog__footer__button--cancel">Cancel</button>
+         <button type="button" class="mdc-button mdc-dialog__footer__button mdc-dialog__footer__button--accept">Rate</button>
+       </footer>
+    </div>
+
+    <!-- Adding Entry View -->
+    <aside id="add-entry"
+           class="mdc-dialog"
+           role="alertdialog">
+           <div class="mdc-dialog__surface">
+               <header class="mdc-dialog__header">
+                 <h2 id="my-mdc-dialog-label" class="mdc-dialog__header__title">
+                   Add Contestant
+                 </h2>
+               </header>
+               <section id="my-mdc-dialog-description" class="mdc-dialog__body">
+                 Adding a contestant couldn't be easier.
+
+                 <!-- loading and displaying the image -->
+                 <form action="server.cgi" method="post" enctype="multipart/form-data">
+                   <input id="captureImage" type="file" name="image" capture="camera" accept="image/*" >
+                   <input type="submit" value="Upload">
+                 </form>
+
+                 <img id="snapshot" />
+                 <!-- end of the image capture and display section -->
+
+                 <div class="mdc-textfield mdc-textfield--fullwidth">
+                   <input class="mdc-textfield__input"
+                          type="text"
+                          placeholder="Name or Title"
+                          aria-label="Name or Title">
+                 </div>
+                 <div class="mdc-textfield mdc-textfield--multiline mdc-textfield--fullwidth">
+                   <textarea class="mdc-textfield__input"
+                             placeholder="Some description would be helpful too"
+                             rows="8" cols="40"
+                             aria-label="Some description would be helpful too"></textarea>
+                 </div>
+               </section>
+               <footer class="mdc-dialog__footer">
+                 <button type="button" class="mdc-button mdc-dialog__footer__button mdc-dialog__footer__button--cancel">Cancel</button>
+                 <button type="button" class="mdc-button mdc-dialog__footer__button mdc-dialog__footer__button--accept">Add</button>
+               </footer>
+             </div>
+             <div class="mdc-dialog__backdrop"></div>
+    </aside>
+    <div>
+  </main>
+
+<!-- Firebase related stuff
+  <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+  <script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyA3TlQFW3Z4qiJoXLChKfFyevCuquLZ3Vs",
+    authDomain: "cookoff-e4fb2.firebaseapp.com",
+    databaseURL: "https://cookoff-e4fb2.firebaseio.com",
+    projectId: "cookoff-e4fb2",
+    storageBucket: "cookoff-e4fb2.appspot.com",
+    messagingSenderId: "786425065883"
+  };
+  firebase.initializeApp(config);
+  </script>
+-->
+  <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+  <script>window.mdc.autoInit();</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
+  <script src="app.js"></script>
+  <script>
+
+  // $('#captureImage').on('change', function(e){
+  //  $data = e.originalEvent.target.files[0];
+  //   $reader = new FileReader();
+  //   reader.onload = function(evt){
+  //   $('#snapshot').attr('src',evt.target.result);
+  //   reader.readAsDaraUrl($data);
+  // });
+
+  </script>
+</body>
+</html>
