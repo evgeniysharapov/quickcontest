@@ -51,7 +51,7 @@
         {{#each entries}}
         <li id="{{id}}" class="mdc-grid-tile">
           <div class="mdc-grid-tile__primary">
-            <img class="mdc-grid-tile__primary-content" src="{{picture}}" />
+            <img class="mdc-grid-tile__primary-content" src="{{this.picture}}" />
           </div>
           <span class="mdc-grid-tile__secondary">
             <span class="mdc-grid-tile__title">{{this.title}}</span>
@@ -176,50 +176,59 @@
     <aside id="single-entry"
            class="mdc-dialog"
            role="alertdialog">
-           <div class="mdc-dialog__surface">
-               <header class="mdc-dialog__header">
-                 <h2 id="my-mdc-dialog-label" class="mdc-dialog__header__title">
-                   Rate the Contestant
-                 </h2>
-               </header>
-               <section id="rate-contestant" class="mdc-dialog__body">
-         Rate contestant on following
+      <div id="rate-contestant" class="mdc-dialog__surface">
+        <script id="judge-entry-template" type="text/x-handlebars-template">
+          <header class="mdc-dialog__header judge-entry-dialog">
+            <h2 id="my-mdc-dialog-label" class="mdc-dialog__header__title">
+              Rate {{this.title}}
+            </h2>
+          </header>
+          <section class="mdc-dialog__body  mdc-dialog__body--scrollable judge-entry-dialog">
 
-         <div class="mdc-layout-grid">
-          <div class="mdc-layout-grid__inner">
-            <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-3">
-              This
-            </div>
-            <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-9">
-              <!-- Slider -->
-              <div id="judge-slider" class="mdc-slider mdc-slider--discrete" tabindex="0" role="slider"
-                   aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"
-                   aria-label="Select Value">
-                <div class="mdc-slider__track-container">
-                  <div class="mdc-slider__track"></div>
-                </div>
-                <div class="mdc-slider__thumb-container">
-                  <div class="mdc-slider__pin">
-                    <span class="mdc-slider__pin-value-marker"></span>
+            <div>
+              <div class="mdc-layout-grid">
+                <div class="mdc-layout-grid__inner">
+                  <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12" style="min-height: 200px;">
+                    <img src="{{this.picture}}" style="max-width: 100%; max-height: 100%;}"/>
                   </div>
-                  <svg class="mdc-slider__thumb" width="21" height="21">
-                    <circle cx="10.5" cy="10.5" r="7.875"></circle>
-                  </svg>
-                  <div class="mdc-slider__focus-ring"></div>
+                  {{# each scorecard}}
+                  <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-3">
+                    {{capitalize this.name}}:<span id="judge-slider-{{this.name}}-value" class="slider-value"></span>
+                  </div>
+                  <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-9">
+                    <!-- Slider -->
+                    <div id="judge-slider-{{this.name}}"
+                         class="mdc-slider mdc-slider--discrete" tabindex="{{@index}}" role="slider"
+                         aria-valuemin="{{this.min}}" aria-valuemax="{{this.max}}" aria-valuenow="{{this.value}}">
+                      <div class="mdc-slider__track-container">
+                        <div id="slider-track-{{name}}" class="mdc-slider__track"></div>
+                      </div>
+                      <div class="mdc-slider__thumb-container">
+                        <div class="mdc-slider__pin">
+                          <span class="mdc-slider__pin-value-marker"></span>
+                        </div>
+                        <svg class="mdc-slider__thumb" width="21" height="21">
+                          <circle cx="10.5" cy="10.5" r="7.875"></circle>
+                        </svg>
+                        <div class="mdc-slider__focus-ring"></div>
+                      </div>
+                    </div>
+                  </div>
+                  {{/each}}
                 </div>
               </div>
             </div>
-          </div>
+            
+          </section>
 
-        </div>
-       </section>
-
-       <footer class="mdc-dialog__footer">
-         <button type="button" class="mdc-button mdc-button--raised mdc-dialog__footer__button mdc-dialog__footer__button--cancel">Cancel</button>
-         <button type="button" class="mdc-button mdc-button--raised mdc-button--accent mdc-dialog__footer__button mdc-dialog__footer__button--accept">Rate</button>
-       </footer>
-    </div>
-  </aside>
+          <footer class="mdc-dialog__footer judge-entry-dialog">
+            <button type="button" class="mdc-button mdc-button--raised mdc-dialog__footer__button mdc-dialog__footer__button--cancel">Cancel</button>
+            <button type="button" class="mdc-button mdc-button--raised mdc-button--accent mdc-dialog__footer__button mdc-dialog__footer__button--accept">Rate</button>
+          </footer>
+        </script>
+        
+      </div>
+    </aside>
 
     <!-- Adding Entry View -->
     <aside id="add-entry"

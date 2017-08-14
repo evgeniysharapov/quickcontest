@@ -35,3 +35,7 @@
 .mdc-grid-tile {
     --mdc-grid-list-tile-width: 180px;
 }
+
+.slider-value {
+    font-weight: bold;
+}
