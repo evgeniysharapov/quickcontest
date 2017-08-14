@@ -35,11 +35,3 @@
 .mdc-grid-tile {
     --mdc-grid-list-tile-width: 180px;
 }
-
-.active {
-  display: block;
-}
-
-.hidden {
-  display: none;
-}

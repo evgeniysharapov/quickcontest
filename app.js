@@ -7,8 +7,8 @@ const appConfig  = {
 const entries = {
 };
 // initial showing
-document.getElementById('single-entry').className="hidden";
-document.getElementById('all-entries').className="active";
+// document.getElementById('single-entry').className="hidden";
+// document.getElementById('all-entries').className="active";
 
 function configuration ( cfg ) {
   const title = document.getElementById('appTitle');
@@ -31,9 +31,26 @@ document.querySelector('#addEntry').addEventListener('click', function (evt) {
   addDialog.show();
 });
 
+
+
 // ==== Judgement dialog
-const authDialog = new mdc.dialog.MDCDialog(document.querySelector('#auth-dialog'));
+const entryDialog = new mdc.dialog.MDCDialog(document.querySelector('#single-entry'));
+
+entryDialog.listen('MDCDialog:accept', function() {
+  console.log('accepted');
+});
+
+entryDialog.listen('MDCDialog:cancel', function() {
+  console.log('canceled');
+});
+
+// slider values
 const {MDCSlider} = mdc.slider;
+const slider = new MDCSlider(document.querySelector('#judge-slider'));
+slider.listen('MDCSlider:change', () => console.log(`Value changed to ${slider.value}`));
+
+// ==== Authentication
+const authDialog = new mdc.dialog.MDCDialog(document.querySelector('#auth-dialog'));
 
 authDialog.listen('MDCDialog:accept', function() {
   console.log('accepted');
@@ -43,38 +60,27 @@ authDialog.listen('MDCDialog:cancel', function() {
   console.log('canceled');
 });
 
-
-// slider values
-const slider = new MDCSlider(document.querySelector('.mdc-slider'));
-slider.listen('MDCSlider:change', () => console.log(`Value changed to ${slider.value}`));
-
-
-// ==== Authentication
 // show sign up dialog
 document.querySelector('#signUp').addEventListener('click', function(e){
 
 });
 
 // ==== Main page
-
-function displayEntry(id){
-    document.getElementById('all-entries').className = "hidden";
-    document.getElementById('single-entry').className = "active";
-}
-
-function hideEntry(){
-    document.getElementById('single-entry').className = "hidden";
-    document.getElementById('all-entries').className = "active";
-}
-
-
 // clicking on an entry
 document.querySelectorAll('#contestant-list li').forEach( li => {
   li.addEventListener('click', function (e) {
     // now we need to figure out which item user clicked on
     if(e.currentTarget && e.currentTarget.nodeName == "LI") {
       //console.log(e.currentTarget.id + " was clicked");
-      displayEntry(e.currentTarget.id);
+      entryDialog.lastFocusedTarget = e.target;
+      entryDialog.show();
+      // HACK: this is to show sliders on a dialog correctly
+      setTimeout(function(e){
+        let event = document.createEvent('HTMLEvents');
+        event.initEvent('resize', true, false);
+        window.dispatchEvent(event);
+        console.log("resize");
+      },1000);
     }
   });
 });
