@@ -40,24 +40,24 @@
 
     <!--  All Entries View -->
     <div id="all-entries">
-      <div class="mdc-grid-list mdc-grid-list--twoline-caption">
-        <ul id="contestant-list" class="mdc-grid-list__tiles"></ul>
-      </div>
+      <div id="contestant-list"></div>
       <button id="addEntry" class="mdc-fab material-icons">
         <i class="material-icons">add</i>
       </button>
           
       <script id="entry-template" type="text/x-handlebars-template">
         {{#each entries}}
-        <li id="{{@key}}" class="mdc-grid-tile">
-          <div class="mdc-grid-tile__primary">
-            <img class="mdc-grid-tile__primary-content" src="{{this.imageUri}}" />
-          </div>
-          <span class="mdc-grid-tile__secondary">
-            <span class="mdc-grid-tile__title">{{this.title}}</span>
-            <span class="mdc-grid-tile__support-text">{{this.description}}</span>
-          </span>
-        </li>
+        <div id="{{@key}}" class="mdc-card">
+          <section class="mdc-card__media">
+            <img class="mdc-card__media-item mdc-card__media-item--3x" src="{{this.imageUri}}" />
+          </section>
+          <section class="mdc-card__primary">
+            <h1 class="mdc-card__title  mdc-card__title--large">{{this.title}}</h2>
+          </section>
+          <section class="mdc-card__supporting-text">
+            {{this.description}}
+          </section>
+        </div>
         {{/each}}
       </script>
       

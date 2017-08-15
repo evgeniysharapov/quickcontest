@@ -94,7 +94,6 @@ function CookOffContest () {
   let toolbar = mdc.toolbar.MDCToolbar.attachTo(document.querySelector('.mdc-toolbar'));
   toolbar.listen('MDCToolbar:change', function(evt) {
     var flexibleExpansionRatio = evt.detail.flexibleExpansionRatio;
-    console.log(flexibleExpansionRatio.toFixed(2));
   });
   
 };
@@ -199,23 +198,20 @@ CookOffContest.prototype.displayContestEntries = function (data) {
   this.contestantList.insertAdjacentHTML('beforeend',entryHtml);
 
 //_ , Adding OnClick for Each Entry
-  document.querySelectorAll('#contestant-list li').forEach( li => {
-    li.addEventListener('click', e => {
-      // now we need to figure out which item user clicked on
-      if(e.currentTarget && e.currentTarget.nodeName == "LI") {
-        //console.log(e.currentTarget.id + " was clicked");
-        this.entryDialog.lastFocusedTarget = e.currentTarget;
-        this.entryId = e.currentTarget.id;
-        this.entry = data.entries[this.entryId];
-        this.displayRatingEntry();
-        // HACK: this is to show sliders on a dialog correctly
-        setTimeout(e => {
-          let event = document.createEvent('HTMLEvents');
-          event.initEvent('resize', true, false);
-          window.dispatchEvent(event);
-          console.log("resize");
-        },1000);
-      }
+  document.querySelectorAll('#contestant-list div.mdc-card').forEach( div => {
+    div.addEventListener('click', e => {
+      //console.log(e.currentTarget.id + " was clicked");
+      this.entryDialog.lastFocusedTarget = e.currentTarget;
+      this.entryId = e.currentTarget.id;
+      this.entry = data.entries[this.entryId];
+      this.displayRatingEntry();
+      // HACK: this is to show sliders on a dialog correctly
+      setTimeout(e => {
+        let event = document.createEvent('HTMLEvents');
+        event.initEvent('resize', true, false);
+        window.dispatchEvent(event);
+        console.log("resize");
+      },1000);
     });
   });
 }
