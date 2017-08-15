@@ -1,2 +1,4 @@
 syntax: glob
 .tern-port
+functions/node_modules/
+public/#index.html#
