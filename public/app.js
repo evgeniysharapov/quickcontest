@@ -191,6 +191,7 @@ CookOffContest.prototype.onAuthStateChanged = function(user) {
     this.userPic.setAttribute('hidden', 'true');
   }
   this.updateSignInOutButtons();
+  this.displayEntries();
 }
 
 //_. Display Contest Entries
