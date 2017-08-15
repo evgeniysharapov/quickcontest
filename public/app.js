@@ -49,7 +49,7 @@ function CookOffContest () {
   this.userName = document.getElementById('user-name');
   this.signInButton = document.getElementById('sign-in');
   this.signOutButton = document.getElementById('sign-out');
-
+  
   this.signOutButton.addEventListener('click', this.signOut.bind(this));
   this.signInButton.addEventListener('click', this.signIn.bind(this));
 
@@ -73,13 +73,8 @@ function CookOffContest () {
     this.resetTextField(this.newEntryDescription);
   }.bind(this));
 
-  document.querySelector('#addEntry').addEventListener('click', (evt) => {
-    // TODO: should check for authenticated user
-    this.addDialog.lastFocusedTarget = evt.target;
-    this.addDialog.show();
-    this.newEntryImage.addEventListener('change', this.updateNewEntryImage.bind(this));
-  });
-
+  document.querySelector('#addEntry').addEventListener('click', this.addEntryAction.bind(this));
+  
 //_. Judgement Entry Dialog
   this.entryDialog = new mdc.dialog.MDCDialog(document.querySelector('#single-entry'));
 
@@ -90,9 +85,37 @@ function CookOffContest () {
     console.log('canceled');
   });
 
+  this.snackBar = new mdc.snackbar.MDCSnackbar(document.querySelector(".mdc-snackbar"));
+
   // show all the entries  
   this.displayEntries();
   
+};
+
+//_. showSnackbar
+CookOffContest.prototype.showSnackbar = function ( snackbar, message, actionText, actionHandler) {
+  snackbar.dismissesOnAction = true;
+  let options =  {
+    message, actionText, actionHandler,
+    actionOnBottom: false,
+    multiline: false,
+    timeout: 3750
+  };
+  snackbar.show(options);
+};
+
+//_. addEntryAction
+CookOffContest.prototype.addEntryAction = function (evt) {
+    let currentUser = this.auth.currentUser;
+    if( currentUser ) {
+      // TODO: should check for authenticated user
+      this.addDialog.lastFocusedTarget = evt.target;
+      this.addDialog.show();
+      this.newEntryImage.addEventListener('change', this.updateNewEntryImage.bind(this));
+    } else {
+      // show snackbar
+      this.showSnackbar(this.snackBar, "You need to be authenticated to add!", "sign in", () => { console.log('signing in'); } );
+    }
 };
 
 //_. initFirebase
@@ -105,7 +128,19 @@ CookOffContest.prototype.initFirebase = function() {
   db.on('value', data => configuration(data.val()));
   // Authentication
   this.auth.onAuthStateChanged(this.onAuthStateChanged.bind(this));
+
+  this.updateSignInOutButtons()
 };
+
+CookOffContest.prototype.updateSignInOutButtons = function() {
+  if( this.auth.currentUser ) {
+    this.signInButton.setAttribute('hidden', true);
+    this.signOutButton.removeAttribute('hidden');
+  } else {
+    this.signOutButton.setAttribute('hidden', true);
+    this.signInButton.removeAttribute('hidden');    
+  }
+}
 
 //_. signIn
 CookOffContest.prototype.signIn = function() {
@@ -134,18 +169,13 @@ CookOffContest.prototype.onAuthStateChanged = function(user) {
     // Show user's profile and sign-out button.
     this.userName.removeAttribute('hidden');
     this.userPic.removeAttribute('hidden');
-    this.signOutButton.removeAttribute('hidden');
-    // Hide sign-in button.
-    this.signInButton.setAttribute('hidden', 'true');
 
   } else { // User is signed out!
     // Hide user's profile and sign-out button.
     this.userName.setAttribute('hidden', 'true');
     this.userPic.setAttribute('hidden', 'true');
-    this.signOutButton.setAttribute('hidden', 'true');
-    // Show sign-in button.
-    this.signInButton.removeAttribute('hidden');
   }
+  this.updateSignInOutButtons();
 }
 
 //_. Display Contest Entries
@@ -257,9 +287,7 @@ CookOffContest.prototype.updateScorecard = function (e) {
 
 //_. addEntry
 CookOffContest.prototype.addEntry = function() {
-  // TODO: add sign-in check
-  
-  let currentUser = this.auth.currentUser;
+  let currentUser = this.auth.currentUser; 
   let file = this.newEntryImage.files[0];
  
   // upload image to cloud 

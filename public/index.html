@@ -24,12 +24,12 @@
             <!-- <a href="#" class="material-icons mdc-toolbar__icon" aria-label="More" alt="More">more_vert</a> -->
             <div hidden id="user-pic"></div>
             <div hidden id="user-name"></div>
-            <button id="sign-out" class="mdc-button">
+            <a href="#" id="sign-out" class="mdc-button  mdc-button--raised">
               Sign-out
-            </button>
-            <button id="sign-in" class="mdc-button">
+            </a>
+            <a href="#" id="sign-in" class="mdc-button  mdc-button--raised">
               <i class="material-icons">account_circle</i>Sign-in
-            </button>
+            </a>
           </section>
         </div>
   </header>
@@ -158,20 +158,6 @@
       <div class="mdc-dialog__backdrop"></div>
     </aside>
 
-    <!-- <div class="mdc-slider" tabindex="0" role="slider"
-         aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"
-         aria-label="Select Value">
-      <div class="mdc-slider__track-container">
-        <div class="mdc-slider__track"></div>
-      </div>
-      <div class="mdc-slider__thumb-container">
-        <svg class="mdc-slider__thumb" width="21" height="21">
-          <circle cx="10.5" cy="10.5" r="7.875"></circle>
-        </svg>
-        <div class="mdc-slider__focus-ring"></div>
-      </div>
-    </div> -->
-
     <!-- Single Entry for Judgement  -->
     <aside id="single-entry"
            class="mdc-dialog"
@@ -274,6 +260,16 @@
       <div class="mdc-dialog__backdrop"></div>
     </aside>
 
+    <div class="mdc-snackbar mdc-snackbar--align-start"
+         aria-live="assertive"
+         aria-atomic="true"
+         aria-hidden="true">
+      <div class="mdc-snackbar__text"></div>
+      <div class="mdc-snackbar__action-wrapper">
+        <button type="button" class="mdc-button mdc-snackbar__action-button mdc-button--accent">Sign In</button>
+      </div>
+    </div>
+
   </div>
   </main>
 
@@ -305,16 +301,5 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.5.0/bluebird.min.js"> </script>
   <script src="app.js"></script>
-  <script>
-
-  // $('#captureImage').on('change', function(e){
-  //  $data = e.originalEvent.target.files[0];
-  //   $reader = new FileReader();
-  //   reader.onload = function(evt){
-  //   $('#snapshot').attr('src',evt.target.result);
-  //   reader.readAsDaraUrl($data);
-  // });
-
-  </script>
 </body>
 </html>
