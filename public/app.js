@@ -89,6 +89,13 @@ function CookOffContest () {
 
   // show all the entries  
   this.displayEntries();
+
+  // toolbar flexed
+  let toolbar = mdc.toolbar.MDCToolbar.attachTo(document.querySelector('.mdc-toolbar'));
+  toolbar.listen('MDCToolbar:change', function(evt) {
+    var flexibleExpansionRatio = evt.detail.flexibleExpansionRatio;
+    console.log(flexibleExpansionRatio.toFixed(2));
+  });
   
 };
 
