@@ -1,0 +1,14 @@
+{
+  "rules": {
+    "config": {
+      ".read": true,
+      ".write": false
+    },
+    "entries": {
+      ".read": true,
+      ".write": true
+    },
+    ".read": "auth != null",
+    ".write": "auth != null"
+  }
+}
