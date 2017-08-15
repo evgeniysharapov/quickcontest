@@ -50,3 +50,15 @@ section.mdc-card__primary > h1 > i {
     font-weight: bold;
     color: green;
 }
+
+#contestant-list {
+    display: flex;
+    flex-flow: row wrap;
+    align-content: center;
+    justify-content: center;
+}
+
+#contestant-list .mdc-card {
+    margin: 24px;
+    min-width: 320px;    
+}

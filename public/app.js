@@ -17,13 +17,13 @@ Handlebars.registerHelper('entryDone', function(entry){
 const LOADING_IMAGE_URL = 'https://www.google.com/images/spin-32.gif';
 
 const appConfig  = {
-  appTitle: "CookOff",
+  appTitle: "Cook-Off",
 
   scorecard: [
     { name: "taste", min: 0, max: 10},
     { name: "texture", min: 0, max: 10},
     { name: "smell", min: 0, max: 10},
-    { name: "presentation", min: 0, max: 0},
+    { name: "presentation", min: 0, max: 10},
     { name: "expected", min: 0, max: 10},
     { name: "innovative", min: 0, max: 10}
   ]
@@ -208,12 +208,12 @@ CookOffContest.prototype.displayContestEntries = function (data) {
 
 //_ , Adding OnClick for Each Entry
   document.querySelectorAll('#contestant-list div.mdc-card').forEach( div => {
-    div.addEventListener('click', this.showRatingDialog.bind(this));
+    div.addEventListener('click', this.showRatingDialog(data).bind(this));
   });
 };
 
 //_. showRateDialog
-CookOffContest.prototype.showRatingDialog = function(e) {
+CookOffContest.prototype.showRatingDialog = (data) => function(e) {
   if( this.auth.currentUser ) { 
     //console.log(e.currentTarget.id + " was clicked");
     this.entryDialog.lastFocusedTarget = e.currentTarget;
