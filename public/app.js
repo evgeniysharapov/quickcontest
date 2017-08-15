@@ -134,11 +134,11 @@ CookOffContest.prototype.initFirebase = function() {
 
 CookOffContest.prototype.updateSignInOutButtons = function() {
   if( this.auth.currentUser ) {
-    this.signInButton.setAttribute('hidden', true);
-    this.signOutButton.removeAttribute('hidden');
+    this.signInButton.style.display = 'none';
+    this.signOutButton.style.display = ''; // inherit
   } else {
-    this.signOutButton.setAttribute('hidden', true);
-    this.signInButton.removeAttribute('hidden');    
+    this.signOutButton.style.display = 'none';
+    this.signInButton.style.display = '';    
   }
 }
 
