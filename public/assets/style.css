@@ -39,3 +39,8 @@
 .slider-value {
     font-weight: bold;
 }
+
+#snapshot {
+    max-width: 100%;
+    max-height: 100%;
+}
