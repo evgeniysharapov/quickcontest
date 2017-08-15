@@ -277,33 +277,16 @@
   </div>
   </main>
 
-  <!-- Firebase related stuff -->
+  <script defer src="/__/firebase/4.2.0/firebase-app.js"></script>
   <script defer src="/__/firebase/4.2.0/firebase-auth.js"></script>
   <script defer src="/__/firebase/4.2.0/firebase-database.js"></script>
-  <script defer src="/__/firebase/4.2.0/firebase-messaging.js"></script>
   <script defer src="/__/firebase/4.2.0/firebase-storage.js"></script>
   <!-- initialize the SDK after all desired features are loaded -->
   <script defer src="/__/firebase/init.js"></script>
-  
-  <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
-  <script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyA3TlQFW3Z4qiJoXLChKfFyevCuquLZ3Vs",
-    authDomain: "cookoff-e4fb2.firebaseapp.com",
-    databaseURL: "https://cookoff-e4fb2.firebaseio.com",
-    projectId: "cookoff-e4fb2",
-    storageBucket: "cookoff-e4fb2.appspot.com",
-    messagingSenderId: "786425065883"
-  };
-  firebase.initializeApp(config);
-  </script>
-
   <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
   <script>window.mdc.autoInit();</script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.5.0/bluebird.min.js"> </script>
-  <script src="app.js"></script>
+  <script defer src="app.js"></script>
 </body>
 </html>
