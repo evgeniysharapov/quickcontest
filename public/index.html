@@ -52,7 +52,11 @@
             <img class="mdc-card__media-item mdc-card__media-item--3x" src="{{this.imageUri}}" />
           </section>
           <section class="mdc-card__primary">
-            <h1 class="mdc-card__title  mdc-card__title--large">{{this.title}}</h2>
+            {{#if (entryDone this) }}
+            <h1 class="mdcchips-card__title  mdc-card__title--large">{{this.title}} <i class="material-icons">done</i></h1>
+            {{else}}
+            <h1 class="mdcchips-card__title  mdc-card__title--large">{{this.title}}</h1>
+            {{/if}}
           </section>
           <section class="mdc-card__supporting-text">
             {{this.description}}

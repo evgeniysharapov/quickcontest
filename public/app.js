@@ -7,6 +7,13 @@ Handlebars.registerHelper('capitalize', function(str){
   return str.slice(0,1).toUpperCase() + str.slice(1);
 });
 
+// Returns true if entry has been done by the user
+// Hackish because it's accessing window.cookOffContest 
+Handlebars.registerHelper('entryDone', function(entry){
+  return _.has(entry, `scorecards.${window.cookOffContest.userId}`);
+});
+
+
 const LOADING_IMAGE_URL = 'https://www.google.com/images/spin-32.gif';
 
 const appConfig  = {
@@ -171,7 +178,9 @@ CookOffContest.prototype.onAuthStateChanged = function(user) {
     // Set the user's profile pic and name.
     this.userPic.style.backgroundImage = 'url(' + (profilePicUrl || '/assets/profile_placeholder.png') + ')';
     this.userName.textContent = userName;
-
+    
+    this.userId = user.uid;
+    
     // Show user's profile and sign-out button.
     this.userName.removeAttribute('hidden');
     this.userPic.removeAttribute('hidden');
