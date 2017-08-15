@@ -127,7 +127,7 @@ CookOffContest.prototype.addEntryAction = function (evt) {
       this.newEntryImage.addEventListener('change', this.updateNewEntryImage.bind(this));
     } else {
       // show snackbar
-      this.showSnackbar(this.snackBar, "You need to be authenticated to add!", "sign in", () => { console.log('signing in'); } );
+      this.showSnackbar(this.snackBar, "You need to be authenticated to add!", "sign in", () => this.signIn() );
     }
 };
 
@@ -208,22 +208,31 @@ CookOffContest.prototype.displayContestEntries = function (data) {
 
 //_ , Adding OnClick for Each Entry
   document.querySelectorAll('#contestant-list div.mdc-card').forEach( div => {
-    div.addEventListener('click', e => {
-      //console.log(e.currentTarget.id + " was clicked");
-      this.entryDialog.lastFocusedTarget = e.currentTarget;
-      this.entryId = e.currentTarget.id;
-      this.entry = data.entries[this.entryId];
-      this.displayRatingEntry();
-      // HACK: this is to show sliders on a dialog correctly
-      setTimeout(e => {
-        let event = document.createEvent('HTMLEvents');
-        event.initEvent('resize', true, false);
-        window.dispatchEvent(event);
-        console.log("resize");
-      },1000);
-    });
+    div.addEventListener('click', this.showRatingDialog.bind(this));
   });
-}
+};
+
+//_. showRateDialog
+CookOffContest.prototype.showRatingDialog = function(e) {
+  if( this.auth.currentUser ) { 
+    //console.log(e.currentTarget.id + " was clicked");
+    this.entryDialog.lastFocusedTarget = e.currentTarget;
+    this.entryId = e.currentTarget.id;
+    this.entry = data.entries[this.entryId];
+    this.displayRatingEntry();
+    // HACK: this is to show sliders on a dialog correctly
+    setTimeout(e => {
+      let event = document.createEvent('HTMLEvents');
+      event.initEvent('resize', true, false);
+      window.dispatchEvent(event);
+      console.log("resize");
+    },1000);
+  } else {
+      // show snackbar
+    this.showSnackbar(this.snackBar, "You need to be authenticated to rate!", "sign in", () => this.signIn() );
+  }
+};
+
 
 //_.  displayEntries
 CookOffContest.prototype.displayEntries = function() {
