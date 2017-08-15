@@ -49,9 +49,9 @@
           
       <script id="entry-template" type="text/x-handlebars-template">
         {{#each entries}}
-        <li id="{{@index}}" class="mdc-grid-tile">
+        <li id="{{@key}}" class="mdc-grid-tile">
           <div class="mdc-grid-tile__primary">
-            <img class="mdc-grid-tile__primary-content" src="{{this.image}}" />
+            <img class="mdc-grid-tile__primary-content" src="{{this.imageUri}}" />
           </div>
           <span class="mdc-grid-tile__secondary">
             <span class="mdc-grid-tile__title">{{this.title}}</span>
@@ -189,17 +189,17 @@
               <div class="mdc-layout-grid">
                 <div class="mdc-layout-grid__inner">
                   <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12" style="min-height: 200px;">
-                    <img src="{{this.image}}" style="max-width: 100%; max-height: 100%;}"/>
+                    <img src="{{this.imageUri}}" style="max-width: 100%; max-height: 100%;}"/>
                   </div>
                   {{# each scorecard}}
                   <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-3">
-                    {{capitalize this.name}}:<span id="judge-slider-{{this.name}}-value" class="slider-value"></span>
+                    {{capitalize this.name}}:<span id="judge-slider-{{this.name}}-value" class="slider-value">{{this.val}}</span>
                   </div>
                   <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-9">
                     <!-- Slider -->
                     <div id="judge-slider-{{this.name}}"
                          class="mdc-slider mdc-slider--discrete" tabindex="{{@index}}" role="slider"
-                         aria-valuemin="{{this.min}}" aria-valuemax="{{this.max}}" aria-valuenow="{{this.value}}">
+                         aria-valuemin="{{this.min}}" aria-valuemax="{{this.max}}" aria-valuenow="{{this.val}}">
                       <div class="mdc-slider__track-container">
                         <div id="slider-track-{{name}}" class="mdc-slider__track"></div>
                       </div>

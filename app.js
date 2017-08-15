@@ -27,53 +27,6 @@ function configuration ( cfg ) {
   title.innerText = cfg.appTitle;
 };
 
-//_ Judgment Dialog
-const entryDialog = new mdc.dialog.MDCDialog(document.querySelector('#single-entry'));
-
-entryDialog.listen('MDCDialog:accept', function() {
-  console.log('accepted');
-});
-
-entryDialog.listen('MDCDialog:cancel', function() {
-  console.log('canceled');
-});
-
-//_. displayRatingEntry
-function displayRatingEntry(id, entries) {
-  // find entry in the list
-  let entry = /*_.find(entries, (e) => e.id === id);*/
-      entries[id];
-  if (!entry) {
-    console.error(`Couldn't find entry with '${id}'`);
-    return;
-  }
-  // find and compile Handlebars template
-  let judgeEntrySource   = document.getElementById("judge-entry-template").innerText;
-  let judgeEntryTemplate = Handlebars.compile(judgeEntrySource);
-  // if entry has a scorecard for the current user show it
-  // if entry doesn't hanve a scrorecard for the current user - use default one
-  if( ! entry.scorecard ) {
-    entry.scorecard = appConfig.scorecard;
-  }
-  let entryHtml = judgeEntryTemplate(entry);
-  // clear up previous content and add a new one
-  _.each(document.querySelectorAll('.judge-entry-dialog'), c => document.getElementById("rate-contestant").removeChild(c));
-  document.getElementById("rate-contestant").insertAdjacentHTML('beforeend',entryHtml);
-
-//_ , Sliders
-  const {MDCSlider} = mdc.slider;
-  _.each(entry.scorecard, (e) => {
-    const slider = new MDCSlider(document.querySelector(`#judge-slider-${e.name}`));
-    slider.listen('MDCSlider:change', (evt) => {
-      document.querySelector(`#judge-slider-${e.name}-value`).innerText = `${slider.value}`;
-      console.log(`Value ${e.name} changed to ${slider.value}`);
-      console.log(`Details: ${evt}`);
-    });
-  });
- 
-  entryDialog.show();
-}
-
 //_ Authentication
 const authDialog = new mdc.dialog.MDCDialog(document.querySelector('#auth-dialog'));
 
@@ -87,46 +40,16 @@ authDialog.listen('MDCDialog:cancel', function() {
 
 // show sign up dialog
 document.querySelector('#signUp').addEventListener('click', function(e){
-
 });
-
-//_ Main page
-
-//_. Display Contest Entries
-function displayEntries (data) {
-  let entrySource   = document.getElementById("entry-template").innerText;
-  let entryTemplate = Handlebars.compile(entrySource);
-  let entryHtml = entryTemplate(data);
-  document.getElementById("contestant-list").insertAdjacentHTML('beforeend',entryHtml);
-
-//_ , Adding OnClick for Each Entry
-  document.querySelectorAll('#contestant-list li').forEach( li => {
-    li.addEventListener('click', function (e) {
-      // now we need to figure out which item user clicked on
-      if(e.currentTarget && e.currentTarget.nodeName == "LI") {
-        //console.log(e.currentTarget.id + " was clicked");
-        entryDialog.lastFocusedTarget = e.currentTarget;
-        displayRatingEntry(e.currentTarget.id, data.entries);
-        // HACK: this is to show sliders on a dialog correctly
-        setTimeout(function(e){
-          let event = document.createEvent('HTMLEvents');
-          event.initEvent('resize', true, false);
-          window.dispatchEvent(event);
-          console.log("resize");
-        },1000);
-      }
-    });
-  });
-}
-  
 
 //_ CookOff class old style
 function CookOffContest () {
-  // User and authentication
+  // User and authentication DOM Elements
   this.userPic = document.getElementById('user-pic');
   this.userName = document.getElementById('user-name');
   this.signInButton = document.getElementById('sign-in');
   this.signOutButton = document.getElementById('sign-out');
+
   this.signOutButton.addEventListener('click', this.signOut.bind(this));
   this.signInButton.addEventListener('click', this.signIn.bind(this));
 
@@ -138,9 +61,8 @@ function CookOffContest () {
   
   this.initFirebase();
 
-  // show all the entries 
-  this.displayEntries();
-
+  this.contestantList = document.getElementById("contestant-list");
+  
 //_. Add contestant Entry Dialog  
   this.addDialog = new mdc.dialog.MDCDialog(document.querySelector('#add-entry'));
 
@@ -157,6 +79,20 @@ function CookOffContest () {
     this.addDialog.show();
     this.newEntryImage.addEventListener('change', this.updateNewEntryImage.bind(this));
   });
+
+//_. Judgement Entry Dialog
+  this.entryDialog = new mdc.dialog.MDCDialog(document.querySelector('#single-entry'));
+
+  this.entryDialog.listen('MDCDialog:accept', this.updateScorecard.bind(this));
+
+  this.entryDialog.listen('MDCDialog:cancel', function() {
+    this.entry = undefined;
+    console.log('canceled');
+  });
+
+  // show all the entries  
+  this.displayEntries();
+  
 };
 
 //_. initFirebase
@@ -212,42 +148,120 @@ CookOffContest.prototype.onAuthStateChanged = function(user) {
   }
 }
 
+//_. Display Contest Entries
+CookOffContest.prototype.displayContestEntries = function (data) {
+  // Handlebars compilation
+  let entrySource   = document.getElementById("entry-template").innerText;
+  let entryTemplate = Handlebars.compile(entrySource);
+  let entryHtml = entryTemplate(data);
 
-//_. modifyImageURL
-CookOffContest.prototype.modifyImageURL = function (imageUri) {
-  if (imageUri && imageUri.startsWith('gs://')) {
-    return this.storage.refFromURL(imageUri).getMetadata().then(function(metadata) {
-      return metadata.downloadURLs[0];
-    });
-  } else {
-    return Promise.resolve(imageUri);
+  // clear up
+  while(this.contestantList.firstChild){
+    this.contestantList.removeChild(this.contestantList.firstChild);
   }
+  this.contestantList.insertAdjacentHTML('beforeend',entryHtml);
+
+//_ , Adding OnClick for Each Entry
+  document.querySelectorAll('#contestant-list li').forEach( li => {
+    li.addEventListener('click', e => {
+      // now we need to figure out which item user clicked on
+      if(e.currentTarget && e.currentTarget.nodeName == "LI") {
+        //console.log(e.currentTarget.id + " was clicked");
+        this.entryDialog.lastFocusedTarget = e.currentTarget;
+        this.entryId = e.currentTarget.id;
+        this.entry = data.entries[this.entryId];
+        this.displayRatingEntry();
+        // HACK: this is to show sliders on a dialog correctly
+        setTimeout(e => {
+          let event = document.createEvent('HTMLEvents');
+          event.initEvent('resize', true, false);
+          window.dispatchEvent(event);
+          console.log("resize");
+        },1000);
+      }
+    });
+  });
 }
 
 //_.  displayEntries
 CookOffContest.prototype.displayEntries = function() {
   let entriesDb = this.db.ref().child('entries');
   entriesDb.off();
-
-  entriesDb.once('value').then(data => {
-    return data.val();
-  }).then(entries => {
-    let promisedEntries = _.map(entries, e => {
-      let image = this.modifyImageURL(e.image);
-      return Promise.props(Object.assign({}, e, {image}));
-    });
-    return Promise.all(promisedEntries);
-  }).then(entries => {
-    displayEntries({entries});
+  entriesDb.on('value', data => {
+    let entries = data.val();
+    this.displayContestEntries({entries});
   });
 };
+
+
+//_. displayRatingEntry
+CookOffContest.prototype.displayRatingEntry = function() {
+  // check that we have authenticated user
+  let currentUser = this.auth.currentUser;
+
+  if(currentUser) {
+    if (!this.entry) {
+      console.error(`Couldn't find entry with '${this.entryId}'`);
+      return;
+    }
+
+    // if entry has a scorecard for the current user show it
+    // if entry doesn't hanve a scrorecard for the current user - use default one
+    if( ! this.entry.scorecards ) {
+      this.entry.scorecards = {};
+    }
+    if( ! this.entry.scorecards[currentUser.uid] ) {
+      this.entry.scorecards[currentUser.uid] = appConfig.scorecard;
+    }
+   
+    // TODO: extract it to pre-compiled 
+    // find and compile Handlebars template and update it with data
+    let judgeEntrySource   = document.getElementById("judge-entry-template").innerText;
+    let judgeEntryTemplate = Handlebars.compile(judgeEntrySource);   
+    let entryHtml = judgeEntryTemplate(Object.assign({}, this.entry, {scorecard: this.entry.scorecards[currentUser.uid]}));
+    // clear up previous content and add a new one
+    _.each(document.querySelectorAll('.judge-entry-dialog'), c => document.getElementById("rate-contestant").removeChild(c));
+    document.getElementById("rate-contestant").insertAdjacentHTML('beforeend',entryHtml);
+
+    //_ , Sliders
+    _.each(this.entry.scorecards[currentUser.uid], e => {
+      const slider = new mdc.slider.MDCSlider(document.querySelector(`#judge-slider-${e.name}`));
+      // HACK: those sliders are very buggy (without this they do not show any value)
+      slider.value = e.val;
+        
+      slider.listen('MDCSlider:change', evt => {
+        let score = _.find(this.entry.scorecards[currentUser.uid], o => o.name === e.name)
+        score.val = slider.value;
+        document.querySelector(`#judge-slider-${e.name}-value`).innerText = `${slider.value}`;
+        // console.log(`Value ${e.name} changed to ${slider.value}`);
+        // console.log(`Details: ${evt}`);
+      });
+    });
+    
+    this.entryDialog.show();
+  } else {
+    // authenticate 
+  }
+};
+
+//_. updateScorecard
+CookOffContest.prototype.updateScorecard = function (e) {
+  let entriesDb = this.db.ref().child('entries');
+  entriesDb.update({[this.entryId] : this.entry}).then(() => {
+    // clean up
+    this.entryId = undefined;
+    this.entry = undefined;
+  });  
+}
+
 
 //_. addEntry
 CookOffContest.prototype.addEntry = function() {
   // TODO: add sign-in check
+  
   let currentUser = this.auth.currentUser;
   let file = this.newEntryImage.files[0];
-  
+ 
   // upload image to cloud 
   let filePath = `${currentUser.uid}/${"test"}/${file.name}`;
 
@@ -256,12 +270,15 @@ CookOffContest.prototype.addEntry = function() {
     title: this.newEntryTitle.value,
     description: this.newEntryDescription.value,
     author: currentUser.uid,
-    image: LOADING_IMAGE_URL
+    image: LOADING_IMAGE_URL,
   }).then( data => {
     return this.storage.ref(filePath).put(file).then(snapshot => {
-       // Get the file's Storage URI and update the entry.
-       var fullPath = snapshot.metadata.fullPath;
-       return data.update({image: this.storage.ref(fullPath).toString()});
+      // Get the file's Storage URI and update the entry.
+      var fullPath = snapshot.metadata.fullPath;
+      return data.update({
+        image: this.storage.ref(fullPath).toString(),
+        imageUri: snapshot.metadata.downloadURLs[0]
+      });
     });
   }).then(() => {
     this.resetTextField(this.newEntryTitle);
@@ -284,6 +301,8 @@ CookOffContest.prototype.updateNewEntryImage = function (event) {
     reader.readAsDataURL(file);
   }
 };
+
+
 
 //_. resetTextField
 CookOffContest.prototype.resetTextField = function(field) {
