@@ -62,3 +62,14 @@ section.mdc-card__primary > h1 > i {
     margin: 24px;
     min-width: 320px;    
 }
+
+#sign-in, #sign-out {
+    margin-top: 10px;
+    margin-right: 5px;
+}
+
+.mdc-snackbar__action-button {
+    color: #db4a0a;
+    color: var(--mdc-theme-primary, #db4a0a);
+    font-weight: bolder;
+}

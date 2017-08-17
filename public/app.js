@@ -92,7 +92,7 @@ function CookOffContest () {
     console.log('canceled');
   });
 
-  this.snackBar = new mdc.snackbar.MDCSnackbar(document.querySelector(".mdc-snackbar"));
+  this.snackBar = new mdc.snackbar.MDCSnackbar(document.getElementById("app-snackbar"));
 
   // show all the entries  
   this.displayEntries();
