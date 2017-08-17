@@ -112,7 +112,21 @@ function CookOffContest () {
     // Terms of service url.
     //tosUrl: '<your-tos-url>'
   };
-  
+
+
+  document.getElementById('main-menu').addEventListener('click', function(e){
+    if (this.isRatingsShown) {
+      document.getElementById('rating-section').setAttribute('hidden', true);
+      document.getElementById('all-entries').removeAttribute('hidden');     
+      // hide it
+      this.isRatingsShown = false;
+    } else {
+      document.getElementById('all-entries').setAttribute('hidden', true);
+      document.getElementById('rating-section').removeAttribute('hidden');      
+      this.showRatings();
+      this.isRatingsShown = true;
+    }
+  }.bind(this));
 };
 
 //_. showSnackbar
@@ -247,6 +261,36 @@ CookOffContest.prototype.showRatingDialog = (data) => function(e) {
     this.showSnackbar(this.snackBar, "You need to be authenticated to rate!", "sign in", () => this.signIn() );
   }
 };
+
+CookOffContest.prototype.showRatings = function() {
+  let ratingsDb = this.db.ref().child('entries');
+  ratingsDb.off();
+  ratingsDb.on('value', data => {
+    let entries = data.val();
+    let ratings = _.mapValues(entries, (e) => {
+      let judgements = _.mapValues(e.scorecards, (judge) => { return _.reduce(judge, (sum, v) => sum + v.val || 0, 0)});
+      let nJudges = _.size(judgements);
+      let avg = _.reduce(judgements, (sum, val) => sum + val) / nJudges;
+      return Object.assign({}, {imageUri: e.imageUri, title: e.title, details: `Rated by ${nJudges}`, score: avg || 0});
+    });
+
+    ratings = _.reverse(_.sortBy(ratings, 'score'));
+    
+    // HACK: add empty ones
+    ratings.push({ imageUri: '/assets/Clear1x1.gif'});
+    ratings.push({imageUri: '/assets/Clear1x1.gif'});
+
+    // compile and show
+    let src   = document.getElementById("rated-entry-template").innerText;
+    let template = Handlebars.compile(src);   
+    let html = template({ratings});
+    // clear up previous content and add a new one
+    
+    _.each(document.querySelectorAll('#rated-entries .mdc-list-item'), c => document.getElementById("rated-entries").removeChild(c));
+    document.getElementById("rated-entries").insertAdjacentHTML('beforeend',html);
+    
+  });
+}
 
 
 //_.  displayEntries

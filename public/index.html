@@ -19,6 +19,7 @@
   <header id="main-toolbar" class="mdc-toolbar mdc-toolbar--fixed mdc-toolbar--waterfall mdc-toolbar--flexible mdc-toolbar--flexible-default-behavior mdc-toolbar--flexible-space-maximized">
         <div class="mdc-toolbar__row">
           <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+            <a id="main-menu" href="#" class="material-icons mdc-toolbar__icon--menu">menu</a>
             <span id="appTitle" class="mdc-toolbar__title">Title</span>
           </section>
           <section class="mdc-toolbar__section mdc-toolbar__section--align-end" role="toolbar">
@@ -69,6 +70,26 @@
 
     </div>
 
+    <section id="rating-section" hidden="true">
+      <h2>Rating</h2>
+      <ul id="rated-entries" class="mdc-list mdc-list--avatar-list">       
+      </ul>
+        
+        <script id="rated-entry-template" type="text/x-handlebars-template">
+          {{#each ratings}}
+          <li class="mdc-list-item">
+            <img class="mdc-list-item__start-detail" src="{{this.imageUri}}"
+                 width="56" height="56">
+            <span class="mdc-list-item__text">
+              {{this.title}}
+              <span class="mdc-list-item__text__secondary">{{this.details}}</span>
+            </span>
+            <span class="mdc-list-item__end-detail">{{this.score}} </span>
+          </li>
+          {{/each}}
+        </script>
+    </section>
+    
 
     <!-- Authentication Dialog -->
     <aside id="auth-dialog"
