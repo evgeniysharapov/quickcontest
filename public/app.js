@@ -34,21 +34,6 @@ function configuration ( cfg ) {
   title.innerText = cfg.appTitle;
 };
 
-//_ Authentication
-const authDialog = new mdc.dialog.MDCDialog(document.querySelector('#auth-dialog'));
-
-authDialog.listen('MDCDialog:accept', function() {
-  console.log('accepted');
-});
-
-authDialog.listen('MDCDialog:cancel', function() {
-  console.log('canceled');
-});
-
-// show sign up dialog
-document.querySelector('#signUp').addEventListener('click', function(e){
-});
-
 //_ CookOff class old style
 function CookOffContest () {
   // User and authentication DOM Elements
@@ -102,6 +87,31 @@ function CookOffContest () {
   toolbar.listen('MDCToolbar:change', function(evt) {
     var flexibleExpansionRatio = evt.detail.flexibleExpansionRatio;
   });
+
+  // FirebaseUI config.
+  this.uiConfig = {
+    signInSuccessUrl: 'http://localhost:5000',
+    signInOptions: [
+      // Leave the lines as is for the providers you want to offer your users.
+      firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+      // firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+      // firebase.auth.TwitterAuthProvider.PROVIDER_ID,
+      // firebase.auth.GithubAuthProvider.PROVIDER_ID,
+      // firebase.auth.EmailAuthProvider.PROVIDER_ID,
+      {
+        provider: firebase.auth.PhoneAuthProvider.PROVIDER_ID,
+        // Invisible reCAPTCHA with image challenge and bottom left badge.
+        recaptchaParameters: {
+          type: 'image',
+          size: 'invisible',
+          badge: 'bottomleft'
+        }
+      }
+      
+    ],
+    // Terms of service url.
+    //tosUrl: '<your-tos-url>'
+  };
   
 };
 
@@ -157,16 +167,20 @@ CookOffContest.prototype.updateSignInOutButtons = function() {
 
 //_. signIn
 CookOffContest.prototype.signIn = function() {
-  // Sign in Firebase using popup auth and Google as the identity provider.
-  var provider = new firebase.auth.GoogleAuthProvider();
-  this.auth.signInWithPopup(provider);
-}
+  //_ Authentication
+  const authDialog = new mdc.dialog.MDCDialog(document.querySelector('#auth-dialog'));
+  // Initialize the FirebaseUI Widget using Firebase.
+  var ui = new firebaseui.auth.AuthUI(firebase.auth());
+  // The start method will wait until the DOM is loaded.
+  ui.start('#firebaseui-auth-container', this.uiConfig);
+  authDialog.show();
+};
 
 //_. signOut
 CookOffContest.prototype.signOut = function () {
   // Sign out of Firebase.
   this.auth.signOut();
-}
+};
 
 //_. onAuthStateChanged
 CookOffContest.prototype.onAuthStateChanged = function(user) {

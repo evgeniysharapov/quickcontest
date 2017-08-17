@@ -10,6 +10,7 @@
   <title>Contest</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.3.0/firebaseui.css" />
   <link rel="stylesheet" href="assets/style.css" />
 </head>
 
@@ -76,71 +77,30 @@
       <div id="auth" class="mdc-dialog__surface">
         <header class="mdc-dialog__header">
           <h2 class="mdc-dialog__header__title">
-            Sign In or Sign Up
+            Sign In Using Phone / Google
           </h2>
         </header>
         <section class="mdc-dialog__body">
-
-          <form action="#" id="sign-in-form">
-            <div>
-              <div class="mdc-form-field">
-                <div class="mdc-textfield" data-mdc-auto-init="MDCTextfield">
-                  <input id="username" type="text" class="mdc-textfield__input">
-                  <label for="username" class="mdc-textfield__label">
-                    Username
-                  </label>
-                </div>
-              </div>
-
-              <div class="mdc-form-field">
-                <div class="mdc-textfield" data-mdc-auto-init="MDCTextfield">
-                  <input id="password" type="password" class="mdc-textfield__input">
-                  <label for="password" class="mdc-textfield__label">
-                    Password
-                  </label>
-                </div>
-              </div>
-            </div>
-
-            <button type="submit"
-                    class="mdc-button
-                           mdc-button--raised
-                           mdc-button--primary
-                           mdc-ripple-surface"
-                    data-mdc-auto-init="MDCRipple">
-              sign in
-            </button>
-            <button id="signUp" type="button" class="mdc-button mdc-button--raised">Sign Up</button>
-          </form>
+          <div id="firebaseui-auth-container"></div>
         </section>
       </div>
     </aside>
 
-    <aside id="signup-dialog"
+    <aside id="code-dialog"
            class="mdc-dialog"
            role="alertdialog">
       <div class="mdc-dialog__surface">
         <header class="mdc-dialog__header">
-          <h2 class="mdc-dialog__header__title">Sign Up using your phone</h2>
+          <h2 class="mdc-dialog__header__title">Enter Code</h2>
         </header>
         <section class="mdc-dialog__body">
-
-          <form action="#" id="signup-form">
+          <form action="#" id="code-in-form">
             <div>
               <div class="mdc-form-field">
                 <div class="mdc-textfield" data-mdc-auto-init="MDCTextfield">
-                  <input id="username" type="text" class="mdc-textfield__input">
-                  <label for="username" class="mdc-textfield__label">
-                    Username
-                  </label>
-                </div>
-              </div>
-
-              <div class="mdc-form-field">
-                <div class="mdc-textfield" data-mdc-auto-init="MDCTextfield">
-                  <input id="password" type="password" class="mdc-textfield__input">
-                  <label for="password" class="mdc-textfield__label">
-                    Password
+                  <input id="code" type="tel" class="mdc-textfield__input">
+                  <label for="code" class="mdc-textfield__label">
+                    Code
                   </label>
                 </div>
               </div>
@@ -154,7 +114,6 @@
                     data-mdc-auto-init="MDCRipple">
               sign in
             </button>
-            <button id="signUp" type="button" class="mdc-button mdc-button--raised">Sign Up</button>
           </form>
 
         </section>
@@ -287,6 +246,10 @@
   <script>window.mdc.autoInit();</script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
+
+  <script src="https://cdn.firebase.com/libs/firebaseui/2.3.0/firebaseui.js"></script>
+  
   <script defer src="app.js"></script>
+  
 </body>
 </html>
