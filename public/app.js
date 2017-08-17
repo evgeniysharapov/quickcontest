@@ -90,7 +90,7 @@ function CookOffContest () {
 
   // FirebaseUI config.
   this.uiConfig = {
-    signInSuccessUrl: 'http://localhost:5000',
+    signInSuccessUrl: 'https://cookoff-e4fb2.firebaseapp.com',
     signInOptions: [
       // Leave the lines as is for the providers you want to offer your users.
       firebase.auth.GoogleAuthProvider.PROVIDER_ID,
