@@ -1,0 +1,2679 @@
+{
+  "config" : {
+    "appTitle" : "Bake-off"
+  },
+  "entries" : {
+    "-Krkltp5Wv4f0pUDpE9F" : {
+      "author" : "MvP5TEs9k3dMztVFpUSHGkCSaH13",
+      "description" : "",
+      "image" : "gs://cookoff-e4fb2.appspot.com/MvP5TEs9k3dMztVFpUSHGkCSaH13/test/Jalapeno-Cheddar-Scones.jpg",
+      "imageUri" : "https://firebasestorage.googleapis.com/v0/b/cookoff-e4fb2.appspot.com/o/MvP5TEs9k3dMztVFpUSHGkCSaH13%2Ftest%2FJalapeno-Cheddar-Scones.jpg?alt=media&token=9032e099-f353-409c-9396-1aeef38b4f13",
+      "scorecards" : {
+        "4A6uoLL72KWPfhRbMJXOOqIraxn1" : [ {
+          "max" : 10,
+          "min" : 0,
+          "name" : "taste",
+          "val" : 6
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "texture",
+          "val" : 6
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "smell",
+          "val" : 6
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "presentation",
+          "val" : 5
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "expected",
+          "val" : 6
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "innovative",
+          "val" : 7
+        } ],
+        "WB4gxd7kQmbzdViVVUaZrpCxN8N2" : [ {
+          "max" : 10,
+          "min" : 0,
+          "name" : "taste",
+          "val" : 8
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "texture",
+          "val" : 6
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "smell",
+          "val" : 9
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "presentation",
+          "val" : 9
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "expected",
+          "val" : 5
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "innovative",
+          "val" : 6
+        } ],
+        "fJBS7fPHODQN0hdAI95XBRpLYAu2" : [ {
+          "max" : 10,
+          "min" : 0,
+          "name" : "taste",
+          "val" : 9
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "texture",
+          "val" : 6
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "smell",
+          "val" : 7
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "presentation"
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "expected"
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "innovative"
+        } ],
+        "jg3xXB7XvSRcKT96zou1I56WwvD2" : [ {
+          "max" : 10,
+          "min" : 0,
+          "name" : "taste",
+          "val" : 3
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "texture",
+          "val" : 2
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "smell",
+          "val" : 0
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "presentation",
+          "val" : 8
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "expected"
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "innovative"
+        } ],
+        "nkuOLwS24tN4175y0vi3yMl6co13" : [ {
+          "max" : 10,
+          "min" : 0,
+          "name" : "taste",
+          "val" : 3
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "texture",
+          "val" : 4
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "smell",
+          "val" : 3
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "presentation"
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "expected"
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "innovative"
+        } ]
+      },
+      "title" : "Cheddar Cheese and Scallion Scones"
+    },
+    "-Krkm91qgPZRckOpQUjc" : {
+      "author" : "geV8pmwKlMgIQqw863NMhvbidl53",
+      "description" : "French Italian bread with white and whole wheat flour, using cast iron pan",
+      "image" : "gs://cookoff-e4fb2.appspot.com/geV8pmwKlMgIQqw863NMhvbidl53/test/1502983143792712197037.jpg",
+      "imageUri" : "https://firebasestorage.googleapis.com/v0/b/cookoff-e4fb2.appspot.com/o/geV8pmwKlMgIQqw863NMhvbidl53%2Ftest%2F1502983143792712197037.jpg?alt=media&token=d8ce0fd5-29ef-4dac-9e80-e92b57682544",
+      "scorecards" : {
+        "4A6uoLL72KWPfhRbMJXOOqIraxn1" : [ {
+          "max" : 10,
+          "min" : 0,
+          "name" : "taste",
+          "val" : 8
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "texture",
+          "val" : 7
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "smell",
+          "val" : 8
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "presentation",
+          "val" : 7
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "expected",
+          "val" : 7
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "innovative",
+          "val" : 4
+        } ],
+        "CH6ix6vytLSoLmNSsGKkhNjU4on1" : [ {
+          "max" : 10,
+          "min" : 0,
+          "name" : "taste",
+          "val" : 7
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "texture",
+          "val" : 6
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "smell",
+          "val" : 5
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "presentation",
+          "val" : 5
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "expected",
+          "val" : 5
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "innovative",
+          "val" : 3
+        } ],
+        "LqD90xONp6Z5ZBqxVFrFRwMTYqk1" : [ {
+          "max" : 10,
+          "min" : 0,
+          "name" : "taste",
+          "val" : 4
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "texture",
+          "val" : 9
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "smell",
+          "val" : 3
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "presentation",
+          "val" : 7
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "expected",
+          "val" : 6
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "innovative",
+          "val" : 6
+        } ],
+        "T3S5jEJV09ZdzrUvaZfsiEa5ZmN2" : [ {
+          "max" : 10,
+          "min" : 0,
+          "name" : "taste",
+          "val" : 9
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "texture",
+          "val" : 8
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "smell",
+          "val" : 8
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "presentation",
+          "val" : 9
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "expected",
+          "val" : 9
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "innovative",
+          "val" : 6
+        } ],
+        "WB4gxd7kQmbzdViVVUaZrpCxN8N2" : [ {
+          "max" : 10,
+          "min" : 0,
+          "name" : "taste",
+          "val" : 5
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "texture",
+          "val" : 7
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "smell",
+          "val" : 6
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "presentation",
+          "val" : 9
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "expected",
+          "val" : 8
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "innovative",
+          "val" : 2
+        } ],
+        "eXCs3dTnJhMKZCuTwDi1nPqPN6p2" : [ {
+          "max" : 10,
+          "min" : 0,
+          "name" : "taste",
+          "val" : 6
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "texture",
+          "val" : 10
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "smell",
+          "val" : 6
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "presentation",
+          "val" : 10
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "expected"
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "innovative"
+        } ],
+        "geV8pmwKlMgIQqw863NMhvbidl53" : [ {
+          "max" : 10,
+          "min" : 0,
+          "name" : "taste",
+          "val" : 9
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "texture",
+          "val" : 9
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "smell",
+          "val" : 9
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "presentation",
+          "val" : 8
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "expected",
+          "val" : 7
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "innovative",
+          "val" : 1
+        } ],
+        "jg3xXB7XvSRcKT96zou1I56WwvD2" : [ {
+          "max" : 10,
+          "min" : 0,
+          "name" : "taste",
+          "val" : 7
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "texture",
+          "val" : 7
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "smell",
+          "val" : 0
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "presentation",
+          "val" : 6
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "expected"
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "innovative"
+        } ],
+        "lbi9lKpCQdNerrM9sGyaxeTEDdp2" : [ {
+          "max" : 10,
+          "min" : 0,
+          "name" : "taste",
+          "val" : 8
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "texture",
+          "val" : 9
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "smell",
+          "val" : 8
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "presentation",
+          "val" : 6
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "expected",
+          "val" : 9
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "innovative",
+          "val" : 3
+        } ],
+        "nLmmKt3rv2T2QqOOKOexmZCPY7A3" : [ {
+          "max" : 10,
+          "min" : 0,
+          "name" : "taste",
+          "val" : 9
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "texture",
+          "val" : 9
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "smell",
+          "val" : 8
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "presentation",
+          "val" : 8
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "expected",
+          "val" : 6
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "innovative",
+          "val" : 5
+        } ],
+        "nkuOLwS24tN4175y0vi3yMl6co13" : [ {
+          "max" : 10,
+          "min" : 0,
+          "name" : "taste",
+          "val" : 3
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "texture",
+          "val" : 3
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "smell",
+          "val" : 3
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "presentation"
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "expected"
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "innovative"
+        } ],
+        "u9Jpyo4l9jQW83IEicnvSV1QDvj1" : [ {
+          "max" : 10,
+          "min" : 0,
+          "name" : "taste",
+          "val" : 7
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "texture",
+          "val" : 6
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "smell",
+          "val" : 6
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "presentation",
+          "val" : 7
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "expected",
+          "val" : 8
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "innovative",
+          "val" : 8
+        } ]
+      },
+      "title" : "Southern Boule"
+    },
+    "-KrkumxPMR5Cj4_FnYkm" : {
+      "author" : "r0QCrZw3soduwRDXV2ZFtzxleDS2",
+      "description" : "A collision of Eastern and Western flavors in a bacon chicken pepper ensemble",
+      "image" : "gs://cookoff-e4fb2.appspot.com/r0QCrZw3soduwRDXV2ZFtzxleDS2/test/20170817_115610.jpg",
+      "imageUri" : "https://firebasestorage.googleapis.com/v0/b/cookoff-e4fb2.appspot.com/o/r0QCrZw3soduwRDXV2ZFtzxleDS2%2Ftest%2F20170817_115610.jpg?alt=media&token=19a62da0-b541-4022-94ce-23143e4036c4",
+      "scorecards" : {
+        "4A6uoLL72KWPfhRbMJXOOqIraxn1" : [ {
+          "max" : 10,
+          "min" : 0,
+          "name" : "taste",
+          "val" : 10
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "texture",
+          "val" : 10
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "smell",
+          "val" : 10
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "presentation",
+          "val" : 10
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "expected",
+          "val" : 10
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "innovative",
+          "val" : 10
+        } ],
+        "CH6ix6vytLSoLmNSsGKkhNjU4on1" : [ {
+          "max" : 10,
+          "min" : 0,
+          "name" : "taste",
+          "val" : 7
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "texture",
+          "val" : 4
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "smell",
+          "val" : 5
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "presentation",
+          "val" : 3
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "expected",
+          "val" : 5
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "innovative",
+          "val" : 2
+        } ],
+        "WB4gxd7kQmbzdViVVUaZrpCxN8N2" : [ {
+          "max" : 10,
+          "min" : 0,
+          "name" : "taste",
+          "val" : 6
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "texture",
+          "val" : 7
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "smell",
+          "val" : 7
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "presentation",
+          "val" : 5
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "expected",
+          "val" : 6
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "innovative",
+          "val" : 3
+        } ],
+        "b0OHkHjrqVOLLFZVAShlashsbWS2" : [ {
+          "max" : 10,
+          "min" : 0,
+          "name" : "taste",
+          "val" : 5
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "texture",
+          "val" : 5
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "smell",
+          "val" : 6
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "presentation",
+          "val" : 5
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "expected",
+          "val" : 9
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "innovative",
+          "val" : 4
+        } ],
+        "eXCs3dTnJhMKZCuTwDi1nPqPN6p2" : [ {
+          "max" : 10,
+          "min" : 0,
+          "name" : "taste",
+          "val" : 10
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "texture",
+          "val" : 10
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "smell",
+          "val" : 10
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "presentation",
+          "val" : 10
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "expected"
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "innovative"
+        } ],
+        "geV8pmwKlMgIQqw863NMhvbidl53" : [ {
+          "max" : 10,
+          "min" : 0,
+          "name" : "taste",
+          "val" : 1
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "texture",
+          "val" : 3
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "smell",
+          "val" : 2
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "presentation",
+          "val" : 5
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "expected",
+          "val" : 1
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "innovative",
+          "val" : 3
+        } ],
+        "jg3xXB7XvSRcKT96zou1I56WwvD2" : [ {
+          "max" : 10,
+          "min" : 0,
+          "name" : "taste",
+          "val" : 8
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "texture",
+          "val" : 2
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "smell",
+          "val" : 0
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "presentation",
+          "val" : 5
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "expected"
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "innovative"
+        } ],
+        "lbi9lKpCQdNerrM9sGyaxeTEDdp2" : [ {
+          "max" : 10,
+          "min" : 0,
+          "name" : "taste",
+          "val" : 8
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "texture",
+          "val" : 5
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "smell",
+          "val" : 8
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "presentation",
+          "val" : 4
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "expected",
+          "val" : 6
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "innovative",
+          "val" : 5
+        } ],
+        "r0QCrZw3soduwRDXV2ZFtzxleDS2" : [ {
+          "max" : 10,
+          "min" : 0,
+          "name" : "taste",
+          "val" : 10
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "texture",
+          "val" : 8
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "smell",
+          "val" : 10
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "presentation",
+          "val" : 9
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "expected",
+          "val" : 10
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "innovative",
+          "val" : 10
+        } ]
+      },
+      "title" : "Chicken Zanzibar"
+    },
+    "-Krkvv9f0mcB3fDUzbb3" : {
+      "author" : "WB4gxd7kQmbzdViVVUaZrpCxN8N2",
+      "description" : "",
+      "image" : "gs://cookoff-e4fb2.appspot.com/WB4gxd7kQmbzdViVVUaZrpCxN8N2/test/150298578031460540173.jpg",
+      "imageUri" : "https://firebasestorage.googleapis.com/v0/b/cookoff-e4fb2.appspot.com/o/WB4gxd7kQmbzdViVVUaZrpCxN8N2%2Ftest%2F150298578031460540173.jpg?alt=media&token=5e5c3090-3a76-419b-a2db-bae17ac25ce1",
+      "title" : ""
+    },
+    "-Krkw4qbWjfuhG6IJaVZ" : {
+      "author" : "WB4gxd7kQmbzdViVVUaZrpCxN8N2",
+      "description" : "Pretzel bites stuffed with Beer Cheese, with a sauce for dipping.",
+      "image" : "gs://cookoff-e4fb2.appspot.com/WB4gxd7kQmbzdViVVUaZrpCxN8N2/test/150298578031460540173.jpg",
+      "imageUri" : "https://firebasestorage.googleapis.com/v0/b/cookoff-e4fb2.appspot.com/o/WB4gxd7kQmbzdViVVUaZrpCxN8N2%2Ftest%2F150298578031460540173.jpg?alt=media&token=5c3ba5c3-8ef9-46f3-aefa-84f19580f6af",
+      "scorecards" : {
+        "4A6uoLL72KWPfhRbMJXOOqIraxn1" : [ {
+          "max" : 10,
+          "min" : 0,
+          "name" : "taste",
+          "val" : 8
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "texture",
+          "val" : 8
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "smell",
+          "val" : 9
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "presentation",
+          "val" : 7
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "expected",
+          "val" : 8
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "innovative",
+          "val" : 8
+        } ],
+        "CH6ix6vytLSoLmNSsGKkhNjU4on1" : [ {
+          "max" : 10,
+          "min" : 0,
+          "name" : "taste",
+          "val" : 7
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "texture",
+          "val" : 4
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "smell",
+          "val" : 6
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "presentation",
+          "val" : 3
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "expected",
+          "val" : 5
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "innovative",
+          "val" : 3
+        } ],
+        "LqD90xONp6Z5ZBqxVFrFRwMTYqk1" : [ {
+          "max" : 10,
+          "min" : 0,
+          "name" : "taste",
+          "val" : 7
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "texture",
+          "val" : 4
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "smell",
+          "val" : 5
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "presentation",
+          "val" : 7
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "expected",
+          "val" : 8
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "innovative",
+          "val" : 9
+        } ],
+        "MvP5TEs9k3dMztVFpUSHGkCSaH13" : [ {
+          "max" : 10,
+          "min" : 0,
+          "name" : "taste",
+          "val" : 10
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "texture",
+          "val" : 10
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "smell",
+          "val" : 8
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "presentation",
+          "val" : 7
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "expected",
+          "val" : 10
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "innovative",
+          "val" : 7
+        } ],
+        "OZByk44HuTUoAKfPa6P1F4E1yhU2" : [ {
+          "max" : 10,
+          "min" : 0,
+          "name" : "taste",
+          "val" : 9
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "texture",
+          "val" : 7
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "smell"
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "presentation"
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "expected"
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "innovative"
+        } ],
+        "T3S5jEJV09ZdzrUvaZfsiEa5ZmN2" : [ {
+          "max" : 10,
+          "min" : 0,
+          "name" : "taste",
+          "val" : 9
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "texture",
+          "val" : 9
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "smell",
+          "val" : 9
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "presentation",
+          "val" : 6
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "expected",
+          "val" : 9
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "innovative",
+          "val" : 9
+        } ],
+        "WB4gxd7kQmbzdViVVUaZrpCxN8N2" : [ {
+          "max" : 10,
+          "min" : 0,
+          "name" : "taste",
+          "val" : 7
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "texture",
+          "val" : 0
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "smell",
+          "val" : 0
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "presentation",
+          "val" : 0
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "expected",
+          "val" : 0
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "innovative",
+          "val" : 10
+        } ],
+        "bkPLACW6M9ZOX7zTNjE2G7nr9ch1" : [ {
+          "max" : 10,
+          "min" : 0,
+          "name" : "taste",
+          "val" : 10
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "texture",
+          "val" : 10
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "smell",
+          "val" : 10
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "presentation",
+          "val" : 10
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "expected",
+          "val" : 10
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "innovative",
+          "val" : 10
+        } ],
+        "eXCs3dTnJhMKZCuTwDi1nPqPN6p2" : [ {
+          "max" : 10,
+          "min" : 0,
+          "name" : "taste",
+          "val" : 6
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "texture",
+          "val" : 6
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "smell",
+          "val" : 6
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "presentation",
+          "val" : 6
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "expected",
+          "val" : 7
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "innovative",
+          "val" : 7
+        } ],
+        "geV8pmwKlMgIQqw863NMhvbidl53" : [ {
+          "max" : 10,
+          "min" : 0,
+          "name" : "taste",
+          "val" : 8
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "texture",
+          "val" : 6
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "smell",
+          "val" : 1
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "presentation",
+          "val" : 3
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "expected",
+          "val" : 4
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "innovative",
+          "val" : 3
+        } ],
+        "jg3xXB7XvSRcKT96zou1I56WwvD2" : [ {
+          "max" : 10,
+          "min" : 0,
+          "name" : "taste",
+          "val" : 10
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "texture",
+          "val" : 9
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "smell",
+          "val" : 0
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "presentation",
+          "val" : 7
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "expected"
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "innovative"
+        } ],
+        "lbi9lKpCQdNerrM9sGyaxeTEDdp2" : [ {
+          "max" : 10,
+          "min" : 0,
+          "name" : "taste",
+          "val" : 8
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "texture",
+          "val" : 6
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "smell",
+          "val" : 8
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "presentation",
+          "val" : 5
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "expected",
+          "val" : 6
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "innovative",
+          "val" : 6
+        } ],
+        "nLmmKt3rv2T2QqOOKOexmZCPY7A3" : [ {
+          "max" : 10,
+          "min" : 0,
+          "name" : "taste",
+          "val" : 8
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "texture",
+          "val" : 8
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "smell",
+          "val" : 8
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "presentation",
+          "val" : 5
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "expected",
+          "val" : 8
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "innovative",
+          "val" : 5
+        } ],
+        "r0QCrZw3soduwRDXV2ZFtzxleDS2" : [ {
+          "max" : 10,
+          "min" : 0,
+          "name" : "taste",
+          "val" : 10
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "texture",
+          "val" : 7
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "smell",
+          "val" : 6
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "presentation",
+          "val" : 8
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "expected",
+          "val" : 7
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "innovative",
+          "val" : 9
+        } ]
+      },
+      "title" : "Beer Cheese Pretzel Bites"
+    },
+    "-KrkwPJkZvmg-MP0YF5z" : {
+      "author" : "LqD90xONp6Z5ZBqxVFrFRwMTYqk1",
+      "description" : "",
+      "image" : "gs://cookoff-e4fb2.appspot.com/LqD90xONp6Z5ZBqxVFrFRwMTYqk1/test/15029858401411483351472.jpg",
+      "imageUri" : "https://firebasestorage.googleapis.com/v0/b/cookoff-e4fb2.appspot.com/o/LqD90xONp6Z5ZBqxVFrFRwMTYqk1%2Ftest%2F15029858401411483351472.jpg?alt=media&token=ce382318-7c47-441b-b685-c364ed54d8ab",
+      "scorecards" : {
+        "OZByk44HuTUoAKfPa6P1F4E1yhU2" : [ {
+          "max" : 10,
+          "min" : 0,
+          "name" : "taste",
+          "val" : 10
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "texture",
+          "val" : 10
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "smell",
+          "val" : 10
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "presentation",
+          "val" : 10
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "expected",
+          "val" : 10
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "innovative",
+          "val" : 10
+        } ],
+        "WB4gxd7kQmbzdViVVUaZrpCxN8N2" : [ {
+          "max" : 10,
+          "min" : 0,
+          "name" : "taste",
+          "val" : 10
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "texture",
+          "val" : 9
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "smell",
+          "val" : 9
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "presentation",
+          "val" : 4
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "expected",
+          "val" : 4
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "innovative",
+          "val" : 4
+        } ],
+        "bkPLACW6M9ZOX7zTNjE2G7nr9ch1" : [ {
+          "max" : 10,
+          "min" : 0,
+          "name" : "taste",
+          "val" : 0
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "texture",
+          "val" : 0
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "smell",
+          "val" : 0
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "presentation",
+          "val" : 0
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "expected",
+          "val" : 0
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "innovative",
+          "val" : 0
+        } ],
+        "c7wFLCgYcFVU8haptxB1iSVbyzQ2" : [ {
+          "max" : 10,
+          "min" : 0,
+          "name" : "taste",
+          "val" : 10
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "texture",
+          "val" : 10
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "smell",
+          "val" : 10
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "presentation",
+          "val" : 10
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "expected",
+          "val" : 10
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "innovative",
+          "val" : 10
+        } ],
+        "geV8pmwKlMgIQqw863NMhvbidl53" : [ {
+          "max" : 10,
+          "min" : 0,
+          "name" : "taste"
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "texture"
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "smell"
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "presentation"
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "expected"
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "innovative"
+        } ],
+        "jg3xXB7XvSRcKT96zou1I56WwvD2" : [ {
+          "max" : 10,
+          "min" : 0,
+          "name" : "taste",
+          "val" : 6
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "texture",
+          "val" : 7
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "smell",
+          "val" : 0
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "presentation",
+          "val" : 3
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "expected"
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "innovative"
+        } ],
+        "nLmmKt3rv2T2QqOOKOexmZCPY7A3" : [ {
+          "max" : 10,
+          "min" : 0,
+          "name" : "taste",
+          "val" : 8
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "texture",
+          "val" : 8
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "smell",
+          "val" : 8
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "presentation",
+          "val" : 8
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "expected",
+          "val" : 8
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "innovative",
+          "val" : 8
+        } ],
+        "nkuOLwS24tN4175y0vi3yMl6co13" : [ {
+          "max" : 10,
+          "min" : 0,
+          "name" : "taste",
+          "val" : 8
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "texture",
+          "val" : 9
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "smell",
+          "val" : 10
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "presentation"
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "expected"
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "innovative"
+        } ],
+        "r0QCrZw3soduwRDXV2ZFtzxleDS2" : [ {
+          "max" : 10,
+          "min" : 0,
+          "name" : "taste",
+          "val" : 8
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "texture",
+          "val" : 7
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "smell",
+          "val" : 9
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "presentation",
+          "val" : 7
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "expected",
+          "val" : 6
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "innovative",
+          "val" : 9
+        } ]
+      },
+      "title" : "Parmesan and Cheddar Cheese Loaf"
+    },
+    "-Krkwq2fM0vL0OYfQgQX" : {
+      "author" : "LqD90xONp6Z5ZBqxVFrFRwMTYqk1",
+      "description" : "",
+      "image" : "gs://cookoff-e4fb2.appspot.com/LqD90xONp6Z5ZBqxVFrFRwMTYqk1/test/15029858401411483351472.jpg",
+      "imageUri" : "https://firebasestorage.googleapis.com/v0/b/cookoff-e4fb2.appspot.com/o/LqD90xONp6Z5ZBqxVFrFRwMTYqk1%2Ftest%2F15029858401411483351472.jpg?alt=media&token=f7bebcf1-d843-4d88-b539-928cf800762c",
+      "scorecards" : {
+        "4A6uoLL72KWPfhRbMJXOOqIraxn1" : [ {
+          "max" : 10,
+          "min" : 0,
+          "name" : "taste",
+          "val" : 8
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "texture",
+          "val" : 8
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "smell",
+          "val" : 9
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "presentation",
+          "val" : 7
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "expected",
+          "val" : 8
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "innovative",
+          "val" : 8
+        } ],
+        "CH6ix6vytLSoLmNSsGKkhNjU4on1" : [ {
+          "max" : 10,
+          "min" : 0,
+          "name" : "taste",
+          "val" : 8
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "texture",
+          "val" : 5
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "smell",
+          "val" : 7
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "presentation",
+          "val" : 4
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "expected",
+          "val" : 6
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "innovative",
+          "val" : 4
+        } ],
+        "MvP5TEs9k3dMztVFpUSHGkCSaH13" : [ {
+          "max" : 10,
+          "min" : 0,
+          "name" : "taste",
+          "val" : 7
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "texture",
+          "val" : 8
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "smell",
+          "val" : 7
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "presentation",
+          "val" : 7
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "expected",
+          "val" : 7
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "innovative",
+          "val" : 7
+        } ],
+        "geV8pmwKlMgIQqw863NMhvbidl53" : [ {
+          "max" : 10,
+          "min" : 0,
+          "name" : "taste",
+          "val" : 5
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "texture",
+          "val" : 4
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "smell",
+          "val" : 1
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "presentation",
+          "val" : 2
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "expected",
+          "val" : 2
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "innovative",
+          "val" : 1
+        } ],
+        "jg3xXB7XvSRcKT96zou1I56WwvD2" : [ {
+          "max" : 10,
+          "min" : 0,
+          "name" : "taste",
+          "val" : 6
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "texture",
+          "val" : 6
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "smell",
+          "val" : 0
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "presentation",
+          "val" : 5
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "expected"
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "innovative"
+        } ]
+      },
+      "title" : ""
+    },
+    "-Krkwxz1fi3WCbr9cjJ_" : {
+      "author" : "LqD90xONp6Z5ZBqxVFrFRwMTYqk1",
+      "description" : "",
+      "image" : "gs://cookoff-e4fb2.appspot.com/LqD90xONp6Z5ZBqxVFrFRwMTYqk1/test/1502986075375350928869.jpg",
+      "imageUri" : "https://firebasestorage.googleapis.com/v0/b/cookoff-e4fb2.appspot.com/o/LqD90xONp6Z5ZBqxVFrFRwMTYqk1%2Ftest%2F1502986075375350928869.jpg?alt=media&token=9a16d338-c263-4a93-a70c-d28f4f4eba20",
+      "scorecards" : {
+        "OZByk44HuTUoAKfPa6P1F4E1yhU2" : [ {
+          "max" : 10,
+          "min" : 0,
+          "name" : "taste",
+          "val" : 10
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "texture",
+          "val" : 10
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "smell",
+          "val" : 10
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "presentation",
+          "val" : 10
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "expected",
+          "val" : 10
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "innovative",
+          "val" : 10
+        } ],
+        "T3S5jEJV09ZdzrUvaZfsiEa5ZmN2" : [ {
+          "max" : 10,
+          "min" : 0,
+          "name" : "taste",
+          "val" : 8
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "texture",
+          "val" : 9
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "smell",
+          "val" : 9
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "presentation",
+          "val" : 9
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "expected",
+          "val" : 9
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "innovative",
+          "val" : 9
+        } ],
+        "WB4gxd7kQmbzdViVVUaZrpCxN8N2" : [ {
+          "max" : 10,
+          "min" : 0,
+          "name" : "taste",
+          "val" : 7
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "texture",
+          "val" : 7
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "smell",
+          "val" : 7
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "presentation",
+          "val" : 7
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "expected",
+          "val" : 5
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "innovative",
+          "val" : 2
+        } ],
+        "bkPLACW6M9ZOX7zTNjE2G7nr9ch1" : [ {
+          "max" : 10,
+          "min" : 0,
+          "name" : "taste",
+          "val" : 0
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "texture",
+          "val" : 0
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "smell",
+          "val" : 0
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "presentation",
+          "val" : 0
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "expected",
+          "val" : 0
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "innovative",
+          "val" : 0
+        } ],
+        "eXCs3dTnJhMKZCuTwDi1nPqPN6p2" : [ {
+          "max" : 10,
+          "min" : 0,
+          "name" : "taste",
+          "val" : 10
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "texture",
+          "val" : 10
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "smell",
+          "val" : 10
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "presentation",
+          "val" : 10
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "expected",
+          "val" : 10
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "innovative",
+          "val" : 10
+        } ],
+        "geV8pmwKlMgIQqw863NMhvbidl53" : [ {
+          "max" : 10,
+          "min" : 0,
+          "name" : "taste",
+          "val" : 9
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "texture",
+          "val" : 8
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "smell",
+          "val" : 8
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "presentation",
+          "val" : 9
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "expected",
+          "val" : 9
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "innovative",
+          "val" : 3
+        } ],
+        "nLmmKt3rv2T2QqOOKOexmZCPY7A3" : [ {
+          "max" : 10,
+          "min" : 0,
+          "name" : "taste",
+          "val" : 8
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "texture",
+          "val" : 8
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "smell",
+          "val" : 8
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "presentation",
+          "val" : 8
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "expected",
+          "val" : 8
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "innovative",
+          "val" : 5
+        } ]
+      },
+      "title" : "Country Boule"
+    },
+    "-KrkxB5N0UaksB6L3ATJ" : {
+      "author" : "u9Jpyo4l9jQW83IEicnvSV1QDvj1",
+      "description" : "",
+      "image" : "gs://cookoff-e4fb2.appspot.com/u9Jpyo4l9jQW83IEicnvSV1QDvj1/test/image.jpg",
+      "imageUri" : "https://firebasestorage.googleapis.com/v0/b/cookoff-e4fb2.appspot.com/o/u9Jpyo4l9jQW83IEicnvSV1QDvj1%2Ftest%2Fimage.jpg?alt=media&token=fcdd287f-d653-4fc7-bf7b-dc43f113f81b",
+      "scorecards" : {
+        "CH6ix6vytLSoLmNSsGKkhNjU4on1" : [ {
+          "max" : 10,
+          "min" : 0,
+          "name" : "taste",
+          "val" : 7
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "texture",
+          "val" : 6
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "smell",
+          "val" : 7
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "presentation",
+          "val" : 4
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "expected",
+          "val" : 6
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "innovative",
+          "val" : 4
+        } ],
+        "LqD90xONp6Z5ZBqxVFrFRwMTYqk1" : [ {
+          "max" : 10,
+          "min" : 0,
+          "name" : "taste",
+          "val" : 7
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "texture",
+          "val" : 6
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "smell",
+          "val" : 5
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "presentation",
+          "val" : 5
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "expected",
+          "val" : 7
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "innovative",
+          "val" : 9
+        } ],
+        "WB4gxd7kQmbzdViVVUaZrpCxN8N2" : [ {
+          "max" : 10,
+          "min" : 0,
+          "name" : "taste",
+          "val" : 6
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "texture",
+          "val" : 4
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "smell",
+          "val" : 8
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "presentation",
+          "val" : 9
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "expected",
+          "val" : 5
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "innovative",
+          "val" : 6
+        } ],
+        "bkPLACW6M9ZOX7zTNjE2G7nr9ch1" : [ {
+          "max" : 10,
+          "min" : 0,
+          "name" : "taste",
+          "val" : 0
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "texture",
+          "val" : 0
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "smell",
+          "val" : 0
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "presentation",
+          "val" : 0
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "expected",
+          "val" : 0
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "innovative",
+          "val" : 0
+        } ],
+        "ddwxkWLrC5gkJ20jWatuuypIAUr1" : [ {
+          "max" : 10,
+          "min" : 0,
+          "name" : "taste",
+          "val" : 10
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "texture",
+          "val" : 9
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "smell",
+          "val" : 9
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "presentation",
+          "val" : 8
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "expected",
+          "val" : 2
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "innovative",
+          "val" : 5
+        } ],
+        "fJBS7fPHODQN0hdAI95XBRpLYAu2" : [ {
+          "max" : 10,
+          "min" : 0,
+          "name" : "taste",
+          "val" : 9
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "texture",
+          "val" : 8
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "smell",
+          "val" : 8
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "presentation"
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "expected"
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "innovative"
+        } ],
+        "geV8pmwKlMgIQqw863NMhvbidl53" : [ {
+          "max" : 10,
+          "min" : 0,
+          "name" : "taste",
+          "val" : 8
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "texture",
+          "val" : 6
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "smell",
+          "val" : 1
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "presentation",
+          "val" : 4
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "expected",
+          "val" : 0
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "innovative",
+          "val" : 9
+        } ],
+        "h2fpgexQ0PeSDYwatZEXPIZGIbc2" : [ {
+          "max" : 10,
+          "min" : 0,
+          "name" : "taste",
+          "val" : 9
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "texture",
+          "val" : 9
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "smell",
+          "val" : 9
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "presentation",
+          "val" : 9
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "expected",
+          "val" : 9
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "innovative",
+          "val" : 9
+        } ],
+        "jg3xXB7XvSRcKT96zou1I56WwvD2" : [ {
+          "max" : 10,
+          "min" : 0,
+          "name" : "taste",
+          "val" : 10
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "texture",
+          "val" : 9
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "smell",
+          "val" : 0
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "presentation",
+          "val" : 9
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "expected"
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "innovative"
+        } ],
+        "nLmmKt3rv2T2QqOOKOexmZCPY7A3" : [ {
+          "max" : 10,
+          "min" : 0,
+          "name" : "taste",
+          "val" : 10
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "texture",
+          "val" : 8
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "smell",
+          "val" : 8
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "presentation",
+          "val" : 10
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "expected",
+          "val" : 6
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "innovative",
+          "val" : 8
+        } ],
+        "r0QCrZw3soduwRDXV2ZFtzxleDS2" : [ {
+          "max" : 10,
+          "min" : 0,
+          "name" : "taste",
+          "val" : 8
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "texture",
+          "val" : 9
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "smell",
+          "val" : 8
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "presentation",
+          "val" : 9
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "expected",
+          "val" : 5
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "innovative",
+          "val" : 10
+        } ]
+      },
+      "title" : ""
+    },
+    "-Krky7LpByfQ7WZ40RL1" : {
+      "author" : "lbi9lKpCQdNerrM9sGyaxeTEDdp2",
+      "description" : "",
+      "image" : "gs://cookoff-e4fb2.appspot.com/lbi9lKpCQdNerrM9sGyaxeTEDdp2/test/1502986390872-531365147.jpg",
+      "imageUri" : "https://firebasestorage.googleapis.com/v0/b/cookoff-e4fb2.appspot.com/o/lbi9lKpCQdNerrM9sGyaxeTEDdp2%2Ftest%2F1502986390872-531365147.jpg?alt=media&token=770cc570-3c84-4a16-9c9e-20fd0fb1b593",
+      "scorecards" : {
+        "4A6uoLL72KWPfhRbMJXOOqIraxn1" : [ {
+          "max" : 10,
+          "min" : 0,
+          "name" : "taste",
+          "val" : 9
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "texture",
+          "val" : 9
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "smell",
+          "val" : 9
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "presentation",
+          "val" : 9
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "expected",
+          "val" : 9
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "innovative",
+          "val" : 9
+        } ],
+        "CH6ix6vytLSoLmNSsGKkhNjU4on1" : [ {
+          "max" : 10,
+          "min" : 0,
+          "name" : "taste",
+          "val" : 9
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "texture",
+          "val" : 9
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "smell",
+          "val" : 7
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "presentation",
+          "val" : 7
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "expected",
+          "val" : 5
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "innovative",
+          "val" : 7
+        } ],
+        "LqD90xONp6Z5ZBqxVFrFRwMTYqk1" : [ {
+          "max" : 10,
+          "min" : 0,
+          "name" : "taste",
+          "val" : 7
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "texture",
+          "val" : 3
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "smell",
+          "val" : 3
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "presentation",
+          "val" : 7
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "expected",
+          "val" : 6
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "innovative",
+          "val" : 8
+        } ],
+        "T3S5jEJV09ZdzrUvaZfsiEa5ZmN2" : [ {
+          "max" : 10,
+          "min" : 0,
+          "name" : "taste",
+          "val" : 9
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "texture",
+          "val" : 9
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "smell",
+          "val" : 9
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "presentation",
+          "val" : 9
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "expected",
+          "val" : 10
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "innovative",
+          "val" : 9
+        } ],
+        "WB4gxd7kQmbzdViVVUaZrpCxN8N2" : [ {
+          "max" : 10,
+          "min" : 0,
+          "name" : "taste",
+          "val" : 8
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "texture",
+          "val" : 6
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "smell",
+          "val" : 3
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "presentation",
+          "val" : 8
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "expected",
+          "val" : 10
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "innovative",
+          "val" : 10
+        } ],
+        "ddwxkWLrC5gkJ20jWatuuypIAUr1" : [ {
+          "max" : 10,
+          "min" : 0,
+          "name" : "taste",
+          "val" : 5
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "texture",
+          "val" : 7
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "smell",
+          "val" : 8
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "presentation",
+          "val" : 5
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "expected",
+          "val" : 7
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "innovative",
+          "val" : 6
+        } ],
+        "fJBS7fPHODQN0hdAI95XBRpLYAu2" : [ {
+          "max" : 10,
+          "min" : 0,
+          "name" : "taste",
+          "val" : 9
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "texture",
+          "val" : 10
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "smell",
+          "val" : 9
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "presentation"
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "expected"
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "innovative"
+        } ],
+        "geV8pmwKlMgIQqw863NMhvbidl53" : [ {
+          "max" : 10,
+          "min" : 0,
+          "name" : "taste",
+          "val" : 8
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "texture",
+          "val" : 6
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "smell",
+          "val" : 1
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "presentation",
+          "val" : 4
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "expected",
+          "val" : 0
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "innovative",
+          "val" : 9
+        } ],
+        "iGLfPa7GDxS2HdAKVCZz55ZBdlk1" : [ {
+          "max" : 10,
+          "min" : 0,
+          "name" : "taste",
+          "val" : 10
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "texture"
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "smell"
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "presentation"
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "expected"
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "innovative"
+        } ],
+        "nLmmKt3rv2T2QqOOKOexmZCPY7A3" : [ {
+          "max" : 10,
+          "min" : 0,
+          "name" : "taste",
+          "val" : 10
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "texture",
+          "val" : 8
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "smell",
+          "val" : 8
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "presentation",
+          "val" : 10
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "expected",
+          "val" : 8
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "innovative",
+          "val" : 9
+        } ],
+        "r0QCrZw3soduwRDXV2ZFtzxleDS2" : [ {
+          "max" : 10,
+          "min" : 0,
+          "name" : "taste",
+          "val" : 8
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "texture",
+          "val" : 6
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "smell",
+          "val" : 6
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "presentation",
+          "val" : 10
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "expected",
+          "val" : 7
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "innovative",
+          "val" : 10
+        } ],
+        "u9Jpyo4l9jQW83IEicnvSV1QDvj1" : [ {
+          "max" : 10,
+          "min" : 0,
+          "name" : "taste",
+          "val" : 9
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "texture",
+          "val" : 10
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "smell",
+          "val" : 10
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "presentation",
+          "val" : 8
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "expected",
+          "val" : 8
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "innovative",
+          "val" : 8
+        } ],
+        "uF5sJDDDqjVGk6p2aEFBsFphj0j2" : [ {
+          "max" : 10,
+          "min" : 0,
+          "name" : "taste",
+          "val" : 10
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "texture",
+          "val" : 7
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "smell",
+          "val" : 7
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "presentation",
+          "val" : 7
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "expected",
+          "val" : 9
+        }, {
+          "max" : 10,
+          "min" : 0,
+          "name" : "innovative",
+          "val" : 9
+        } ]
+      },
+      "title" : ""
+    }
+  }
+}
